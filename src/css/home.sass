@@ -1,0 +1,195 @@
+.homePage
+  h1, h2
+    position: absolute
+    // transform: translateY(-50%) rotate(354deg) perspective(100vw) rotateX(0deg) rotateY(-25deg) rotateZ(-1deg)
+    margin: 0
+    text-align: right
+    line-height: 1.25
+    font-weight: bold
+    transition: all 0.3s ease-in-out
+    letter-spacing: 5px
+    word-break: break-word
+    -webkit-text-stroke-width: 3px
+    -moz-text-stroke-width: 3px
+    -webkit-text-stroke-color: var(--black)
+    -moz-text-stroke-color: var(--black)
+  h1
+    top: 60vmin
+    right: 11vmin
+    font-size: 25vmin
+    color: var(--yellow)
+    filter: drop-shadow(6px 6px 0px var(--black))
+  h2
+    top: 44vmin
+    right: 13vmin
+    transform: scale(1.07, 0.95)
+    font-size: 19vmin
+    color: var(--white)
+
+.svgBackground
+  width: 100vw
+  height: 100vh
+  display: flex
+  flex-wrap: wrap
+  position: absolute
+  svg
+    position: absolute
+    transition: all 0s
+    transform-origin: top left
+    pointer-events: none
+    .canPoint
+      pointer-events: auto
+      cursor: url("../assets/pointer.svg"), pointer
+  .icon_sticker
+    height: 12.5vmin
+    top: 54.1vmin
+    left: 9.5vmin
+    animation: sticker 2s 0s infinite ease
+    transform-origin: center
+    path
+      stroke-width: 3px
+  .icon_range
+    height: 59.6vmin
+    top: 58.15vmin
+    left: 15vmin
+    rect
+      animation: rangeScale 2s 0s infinite ease
+    circle
+      &:nth-child(3)
+        animation: rangeCircle3 2s 0s infinite ease
+      &:nth-child(4)
+        animation: rangeCircle4 2s 0s infinite ease
+      &:nth-child(5)
+        animation: rangeCircle5 2s 0s infinite ease
+      &:nth-child(6)
+        animation: rangeCircle6 2s 0s infinite ease
+      &:nth-child(7)
+        animation: rangeCircle7 2s 0s infinite ease
+      &:nth-child(8)
+        animation: rangeCircle8 2s 0s infinite ease
+      &:nth-child(9)
+        animation: rangeCircle9 2s 0s infinite ease
+    .centerPoint
+      animation: rangeCenterPoint 2s 0s infinite ease
+  .icon_sun
+    height: 10vmin
+    top: 15.28vmin
+    right: 25vmin
+    animation: screenMoving 12s 0.3s infinite ease-in-out
+    path
+      stroke-width: 3px
+    .fillBlack
+      animation: blink 2s 0s infinite ease
+      transform-origin: center
+  .icon_window1
+    height: 53.52vmin
+    top: 23.61vmin
+    left: 30vmin
+    animation: screenMoving 12s 0s infinite ease-in-out
+    filter: drop-shadow(6px 6px 0px var(--black))
+    &.animate
+      .shineLarge
+        animation: shine 1s 0s 1 ease
+        transform-origin: 600.3px 197.3px
+      .shineSmall
+        animation: shine 1s 0.2s 1 ease
+        transform-origin: 662.5px 151.25px
+  .shine1, .shine2, .shine3, .shine4, .shine5, .shine6
+    animation: shineBounce 5s 0s infinite ease-in-out
+    transform-origin: 20px center
+  .shine2
+    animation-delay: 0.15s
+  .shine3
+    animation-delay: 1.3s
+  .shine4
+    animation-delay: 1.45s
+  .shine5
+    animation-delay: 0.6s
+  .shine6
+    animation-delay: 0.75s
+  .shine1
+    height: 8vmin
+    top: 45.6vmin
+    left: 19.04vmin
+  .shine2
+    height: 8vmin
+    top: 50.5vmin
+    left: 25vmin
+  .shine3
+    height: 8vmin
+    top: 82.15vmin
+    left: 71.3vmin
+  .shine4
+    height: 8vmin
+    top: 80.17vmin
+    left: 78.5vmin
+  .shine5
+    height: 8vmin
+    top: 11.11vmin
+    right: 6.77vmin
+  .shine6
+    height: 8vmin
+    top: 7.5vmin
+    right: 12vmin
+  .icon_msg_hello
+    height: 11.18vmin
+    top: 14vmin
+    left: 75.5vmin
+    animation: screenMoving 11s 0.3s infinite ease-in-out
+    filter: drop-shadow(6px 6px 0px var(--black))
+  .icon_window3
+    height: 23.15vmin
+    top: 15.28vmin
+    left: 19.72vmin
+    animation: screenMoving 12s 0.5s infinite ease-in-out
+    filter: drop-shadow(6px 6px 0px var(--black))
+  .icon_window4
+    height: 20.65vmin
+    top: 62.96vmin
+    left: 13.06vmin
+    animation: screenMoving 15s 0.7s infinite ease-in-out
+    filter: drop-shadow(6px 6px 0px var(--black))
+    .svgBtn
+      transition: all 0.2s
+      filter: drop-shadow(6px 6px 0px var(--black))
+      &:hover, &:focus
+        transform: translate(6px, 6px)
+        filter: drop-shadow(0px 0px 0px var(--black))
+    &.animate
+      .svgBtn
+        transform: translate(6px, 6px)
+        filter: drop-shadow(0px 0px 0px var(--black))
+        pointer-events: none
+        text
+          fill: var(--white)
+        rect
+          fill: var(--black)
+  .icon_cloud_large
+    height: 11.55vmin
+    top: 22vmin
+    left: 5vmin
+    animation: cloudLarge 6s 0s infinite ease-in-out
+    transform-origin: center
+  .icon_cloud_small
+    height: 6.44vmin
+    top: 28.5vmin
+    left: 16.35vmin
+    animation: cloudSmall 6s 0.4s infinite ease-in-out
+    transform-origin: center
+  .icon_rainbow
+    height: 28.03vmin
+    top: 5vmin
+    left: 17.2vmin
+    animation: rainbowMoving 12s 0.5s infinite ease-in-out
+  .icon_grid
+    height: 67.13vmin
+    top: 8.06vmin
+    right: 45.13vmin
+  .icon_msg_heart
+    height: 7.43vmin
+    top: 40.87vmin
+    right: 44vmin
+    z-index: 1
+    animation: heartBeat 2.6s 0s infinite ease-in-out
+    transform-origin: bottom
+    filter: drop-shadow(6px 6px 0px var(--black))

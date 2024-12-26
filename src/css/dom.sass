@@ -1,0 +1,163 @@
+\:root
+  line-height: 1.5
+  font-weight: 400
+  color: rgba(255, 255, 255, 0.87)
+  --box-shadow: var(--offset) var(--offset) var(--borderColor)
+  color-scheme: light dark
+  background-color: #242424
+  font-synthesis: none
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  --swiper-pagination-bullet-width: 14px
+  --swiper-pagination-bullet-size: 14px
+  --swiper-pagination-bullet-vertical-gap: 13.5px
+  --swiper-pagination-right: auto
+  --swiper-pagination-left: 40px
+  --swiper-pagination-color: #248AC8
+  --swiper-pagination-bullet-inactive-color: #FFF
+  --swiper-pagination-bullet-inactive-opacity: 1
+  --borderColor: var(--black)
+  --offset: 3px
+  --black: #0A0C25
+  --white: #EBE1D8
+  --blueLight: #6FAFCA
+  --blueDeep: #1B90C6
+  --yellow: #EBB436
+  --orange: #EB6133
+  --pink: #F59096
+  --green: #51853F
+
+*
+  box-sizing: border-box
+  font-family: "Poppins", "M PLUS 1p", Helvetica Neue, Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+html, body
+  width: 100vw
+  min-height: 100vh
+  margin: 0
+  padding: 0
+  cursor: url("../assets/mouse.svg"), auto
+  // background-image: url(https://www.sliderrevolution.com/wp-content/uploads/revslider/gaming-stats-presentation/slide1-bg.jpg)
+
+html::after
+  content: ""
+  width: 100vw
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 99999
+  mix-blend-mode: soft-light
+  opacity: 0.35
+  background-image: url("../assets/noise.jpg")
+  pointer-events: none
+
+body
+  background: linear-gradient(to right, #81BCCA 1px, transparent 1px) 0 0 / 3vmin 3vmin, linear-gradient(to bottom, #81BCCA 1px, transparent 1px) 0 0 / 3vmin 3vmin, var(--blueLight)
+
+h1
+  line-height: 1.1
+  font-size: 3.2em
+
+a
+  font-weight: 500
+  text-decoration: inherit
+
+button
+  padding: 0.6em 1.2em
+  font-size: 1em
+  font-weight: 500
+  font-family: inherit
+  border-radius: 8px
+  border: 1px solid transparent
+  transition: border-color 0.25s
+  background-color: #1A1A1A
+  cursor: url("../assets/pointer.svg"), pointer
+  &:hover
+    border-color: #646CFF
+  &:focus, &:focus-visible
+    outline: 4px auto -webkit-focus-ring-color
+
+#app
+  width: 100%
+
+.brandGroup
+  display: flex
+  flex-direction: column
+  position: fixed
+  top: 50%
+  right: 30px
+  transform: translateY(-50%)
+  z-index: 3
+  gap: 20px
+  a
+    width: 34px
+    height: 34px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    border: 2px solid var(--black)
+    color: var(--orange)
+    box-shadow: var(--box-shadow)
+    background-color: var(--white)
+    font: normal normal normal 24px / 1 FontAwesome
+    cursor: url("../assets/pointer.svg"), pointer
+    &.fa-codepen
+      font-size: 22px
+    &.fa-paperclip
+      font-size: 20px
+
+.hintText
+  width: 50px
+  height: 150px
+  position: fixed
+  right: 20px
+  bottom: 40px
+  z-index: 1
+  .line
+    width: 2px
+    height: 60px
+    position: absolute
+    right: 50%
+    bottom: 0
+    animation: lineMove 5s 0s infinite both ease-in-out
+    background-color: var(--blueDeep)
+  span
+    position: absolute
+    right: -48%
+    transform: perspective(600px) rotate(-90deg) rotateY(0deg) rotateX(0deg)
+    font-size: 14px
+    font-weight: 400
+    white-space: nowrap
+    color: rgba(255, 255, 255, 0.5)
+    letter-spacing: 8px
+    text-transform: uppercase
+
+.pageTitle
+  display: flex
+  flex-direction: column
+  position: absolute
+  right: 10vw
+  bottom: 5vw
+  z-index: 2
+  z-index: 4
+  margin: 0
+  font-size: 8vw
+  font-weight: bold
+  color: var(--white)
+  span
+    text-align: center
+    -webkit-text-stroke-width: 3px
+    -moz-text-stroke-width: 3px
+    -webkit-text-stroke-color: var(--black)
+    -moz-text-stroke-color: var(--black)
+
+@keyframes lineMove
+  0%, 100%
+    transform: translate3d(0, -6px, 0)
+  50%
+    transform: translate3d(0, 2px, 0)

@@ -1,0 +1,132 @@
+.hamburger
+  display: flex
+  position: fixed
+  top: 20px
+  right: 30px
+  z-index: 5
+  margin-right: -15px
+  padding: 15px
+  overflow: visible
+  border: 0
+  transition-timing-function: linear
+  transition-duration: 0.15s
+  transition-property: opacity, filter
+  cursor: url("../assets/pointer.svg"), pointer
+  text-transform: none
+  &.active
+    .hamburgerBox
+      .hamburgerInner
+        width: 70%
+        transform: rotate(45deg)
+        transition-delay: 0.12s
+        transition-timing-function: cubic-bezier(0.215,0.61,0.355,1)
+        &::before
+          top: -4px
+          z-index: 1
+          box-shadow: var(--offset) 0 var(--black)
+          transition: top 75ms ease, transform 75ms cubic-bezier(0.55,0.055,0.675,0.19) 0.12s
+        &::after
+          bottom: -4px
+          transform: rotate(-90deg)
+          box-shadow: 0 var(--offset) var(--black)
+          transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215,0.61,0.355,1) 0.12s
+  .hamburgerBox
+    width: 56px
+    height: 14px
+    display: inline-block
+    position: relative
+    .hamburgerInner
+      width: 100%
+      display: block
+      position: absolute
+      top: 50%
+      margin-top: -2px
+      border-radius: 4px
+      transition-duration: 75ms
+      transition-property: transform
+      background-color: var(--white)
+      &::before, &::after
+        content: ""
+        width: 100%
+        height: 4px
+        display: block
+        position: absolute
+        border-radius: 4px
+        border: 2px solid var(--black)
+        box-shadow: var(--box-shadow)
+        background-color: var(--white)
+      &::before
+        top: -12px
+        transition: top 75ms ease 0.12s, opacity 75ms cubic-bezier(0.55,0.055,0.675,0.19)
+      &::after
+        bottom: -12px
+        transition: bottom 75ms ease 0.12s, transform 75ms cubic-bezier(0.55,0.055,0.675,0.19)
+
+$halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==")
+
+.hamburgerMenu
+  width: 100vw
+  height: 100vh
+  display: flex
+  flex-direction: column
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 4
+  justify-content: center
+  align-items: center
+  background: linear-gradient(to right, #3F9ECA 1px, transparent 1px) 0 0 / 3vmin 3vmin, linear-gradient(to bottom, #3F9ECA 1px, transparent 1px) 0 0 / 3vmin 3vmin, var(--blueDeep)
+  p
+    margin: 0
+    padding: 10px 0
+    line-height: 1.25
+    font-size: 10vh
+    font-weight: bold
+    color: var(--white)
+    transition: all 0.3s ease-in-out
+    letter-spacing: 5px
+    cursor: url("../assets/pointer.svg"), pointer
+    &.stroke
+      color: transparent
+      -webkit-text-stroke-width: 2px
+      -moz-text-stroke-width: 2px
+      -webkit-text-stroke-color: var(--white)
+      -moz-text-stroke-color: var(--white)
+    &.halftone
+      position: relative
+      &::after
+        content: attr(name)
+        position: absolute
+        top: calc(50% + var(--offset)*2)
+        left: calc(50% + var(--offset)*2)
+        transform: translate(-50%, -50%)
+        z-index: -1
+        font-size: 10vh
+        background: $halftone repeat
+        transition: all 0.3s
+        filter: invert(1)
+        letter-spacing: 5px
+        -webkit-text-stroke-width: 0
+        -moz-text-stroke-width: 0
+        -webkit-background-clip: text
+        -moz-background-clip: text
+        background-clip: text
+        -webkit-text-fill-color: transparent
+        -moz-text-fill-color: transparent
+    &:hover
+      transform: translateX(10%) perspective(40px) rotateX(0deg) rotateY(2deg) rotateZ(-4deg)
+      transform-origin: center center
+      &::after
+        top: calc(50% + var(--offset))
+        left: calc(50% + var(--offset))
+        filter: invert(0)
+        background-color: var(--yellow)
+
+.slide-fade-right-enter-active
+  transition: all 0.4s ease-out
+.slide-fade-right-leave-active
+  transition: all 0.4s ease
+.slide-fade-right-enter-from, .slide-fade-right-leave-to
+  transform: translateX(20px)
+  opacity: 0
+

@@ -1,0 +1,185 @@
+.introPage
+  width: 100vw
+  height: 100vh
+  position: relative
+  .textBg
+    width: 100vw
+    height: 100vh
+    position: absolute
+    left: 0
+    overflow: hidden
+    text-align: left
+    opacity: 1
+    .info
+      width: 185vmin
+      position: absolute
+      top: 50%
+      transform: translateX(-2%) translateY(-61%) perspective(90px) rotateX(3deg) rotateY(2deg) rotateZ(-2deg)
+      padding-left: 37vmin
+      transform-origin: center
+    p
+      margin: 0
+      line-height: 1.35
+      font-size: 10vw
+      font-weight: bold
+      color: var(--white)
+      letter-spacing: 1px
+  .svgBackground
+    .shine1
+      top: 11vmin
+      left: 5.8vmin
+    .shine2
+      top: 7.5vmin
+      left: 15vmin
+    .shine3
+      top: 85.15vmin
+      right: 46.3vmin
+      left: unset
+    .shine4
+      height: 13vmin
+      top: 27.17vmin
+      left: 16.8vmin
+    .shine5
+      top: 40vmin
+      right: 9.77vmin
+      left: unset
+    .shine6
+      top: 45vmin
+      right: 14vmin
+      left: unset
+    .icon_grid
+      top: 8.06vmin
+      right: 30vmin
+      left: unset
+    .icon_email
+      height: 16vmin
+      top: 15vmin
+      left: 12vmin
+      transform: rotate(15deg)
+      z-index: 1
+      animation: emailRotate 2s 0s infinite ease-in-out
+      transform-origin: center
+      filter: drop-shadow(6px 6px 0px var(--black))
+    .icon_paper
+      z-index: 1
+      transform-origin: top
+      filter: drop-shadow(6px 6px 0px var(--black))
+      .paper
+        animation: paperMove 3s 0s infinite ease-in-out both
+        transform-origin: center
+    .paper1
+      height: 30vmin
+      bottom: -10vmin
+      left: 9vmin
+      transform: translate(0, -7.6vw) rotate(-22deg)
+    .paper2
+      height: 23vmin
+      top: 33vmin
+      right: 21vmin
+      left: unset
+      transform: translate(1vw, -4.3vw) rotate(11deg)
+      animation-delay: 0.5s
+    .icon_pen
+      height: 10vmin
+      right: 12vmin
+      bottom: 7vmin
+      z-index: 3
+      animation: cloudLarge 8s 0s infinite ease-in-out
+      filter: drop-shadow(6px 6px 0px var(--black))
+    .icon_msg_star
+      height: 11.5vmin
+      top: 15vmin
+      right: 82vmin
+      z-index: 4
+      animation: cloudSmall 8s 0s infinite ease-in-out
+      filter: drop-shadow(6px 6px 0px var(--black))
+      .yellow
+        animation: starBeat 5s 0s infinite ease-in-out
+        transform-origin: right bottom
+        &.star2
+          animation-delay: 0.15s
+        &.star3
+          animation-delay: 0.3s
+        &.star4
+          animation-delay: 0.45s
+        &.star5
+          animation-delay: 0.6s
+    .icon_search
+      height: 10vmin
+      top: 9.5vmin
+      right: 22vmin
+      z-index: 4
+      animation: cloudLarge 6s 0s infinite ease-in-out
+      filter: drop-shadow(6px 6px 0px var(--black))
+    .icon_myPhoto
+      height: 76vmin
+      right: 38vmin
+      bottom: 15vmin
+      z-index: 3
+      animation: myPhotoMoving 15s 0s infinite ease-in-out
+      filter: drop-shadow(6px 6px 0px var(--black))
+    .icon_fileBack
+      height: 70vmin
+      right: 82vmin
+      bottom: 16vmin
+      animation: screenMoving 15s 1s infinite ease-in-out
+      filter: drop-shadow(6px 6px 0px var(--black))
+    .icon_fileFront
+      height: 24vmin
+      right: 63vmin
+      bottom: 12.5vh
+      z-index: 4
+      animation: screenMoving 15s 1s infinite ease-in-out
+      filter: drop-shadow(6px 6px 0px var(--black))
+    .icon_myPhoto, .icon_fileBack, .icon_fileFront
+      path
+        stroke-width: 3px
+  .letter
+    width: 81vmin
+    max-width: 750px
+    display: inline-flex
+    flex-direction: column
+    position: absolute
+    right: 94.5vmin
+    bottom: 19.6vmin
+    padding: 5vmin
+    text-align: left
+    border-radius: 12px
+    border: 3px solid var(--black)
+    gap: 26px
+    background-color: var(--white)
+    filter: drop-shadow(6px 6px 0px var(--black))
+    li
+      p
+        margin: 0
+        font-size: 24px
+        font-weight: 600
+        color: var(--black)
+        letter-spacing: 1px
+        .point
+          display: inline-block
+          position: relative
+          margin: 0 2px
+          padding: 2px 10px
+          &::after
+            content: ""
+            width: 100%
+            height: 18px
+            position: absolute
+            bottom: 7px
+            left: 0
+            z-index: -1
+            border-radius: 40px
+            background-color: var(--pink)
+            opacity: 0.6
+        &.firstLine
+          font-size: 38px
+          .point::after
+            bottom: 10px
+
+// 進入畫面
+.swiper-slide-active
+  .introPage
+    .textBg
+      .info
+        animation: aboutFadeIn 2s 0s 1 ease-in-out
