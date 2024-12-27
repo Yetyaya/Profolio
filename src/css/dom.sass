@@ -150,13 +150,23 @@ button
   font-size: 8vw
   font-weight: bold
   color: var(--white)
-  filter: drop-shadow(6px 6px 0px var(--black))
   span
+    position: relative
     text-align: center
     -webkit-text-stroke-width: 3px
     -moz-text-stroke-width: 3px
     -webkit-text-stroke-color: var(--black)
     -moz-text-stroke-color: var(--black)
+    filter: drop-shadow(6px 6px 0px var(--black))
+    &::after
+      content: attr(data-content)
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      color: var(--white)
+      -webkit-text-stroke-width: 0
+      -moz-text-stroke-width: 0
 
 @keyframes lineMove
   0%, 100%

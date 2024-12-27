@@ -38,8 +38,8 @@ export default {
     SvgIcon.icon(name='msgStar')
     SvgIcon.icon(name='pen')
   h1.pageTitle
-    span 關
-    span 於
+    span(data-content="關") 關
+    span(data-content="於") 於
   .letter
     li
       p.firstLine

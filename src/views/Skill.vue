@@ -45,8 +45,8 @@ export default {
     SvgIcon.icon.cloud4(name='cloudSmall')
     SvgIcon.icon.cloud5(name='cloudLarge')
   h1.pageTitle
-    span 技
-    span 能
+    span(data-content="技") 技
+    span(data-content="能") 能
   .skillList
     .skillItem(v-for='item in skillArr')
       .title(:data-content='item.title')

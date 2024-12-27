@@ -59,9 +59,10 @@ export default {
       left: 11px
       animation: fadeInDown 0.7s 0.5s 1 both ease
   hr
-    width: 20px
+    width: 22px
     margin: 3px 0
-    border-color: var(--swiper-pagination-color)
+    border: none
+    border-top: 2px solid var(--swiper-pagination-color)
   .total
     opacity: 0.5
 
