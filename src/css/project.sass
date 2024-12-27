@@ -127,7 +127,6 @@
       .year
         padding: 11px 20px
         line-height: 1
-        // font-size: 54px
         font-size: 6vmin
         color: var(--black)
         background-color: var(--white)
@@ -139,8 +138,6 @@
         margin-bottom: 18px
         padding: 18px 28px
         line-height: 1
-        // font-size: 107px
-        // font-size: 5.6vw
         font-size: 11vmin
         color: var(--white)
         word-wrap: break-word
@@ -181,32 +178,35 @@
             margin: 0
             border: none
             border-top: 3px dotted var(--white)
+            filter: drop-shadow(1px 1px 0px var(--black))
           span
+            padding: 0 10px
             font-size: 2.2vmin
             font-family: "Racing Sans One"
-            color: var(--white)
-            letter-spacing: 2px
+            border-radius: 50px
+            color: var(--black)
+            background-color: var(--white)
+            filter: drop-shadow(3px 3px 0px var(--black))
+            letter-spacing: 1px
       .classify
         margin-bottom: 6px
         padding: 5px 15px
-        // font-size: 21px
-        // font-size: 1.2vw
         font-size: 2.5vmin
         font-weight: 700
         border-radius: 5px
         border: 2px solid var(--black)
         color: var(--black)
+        filter: drop-shadow(2px 2px 0px var(--black))
         letter-spacing: 1.5px
         background-color: var(--white)
       .name
         position: relative
         margin-bottom: 20px
         margin-left: 5px
-        // font-size: 40px
-        // font-size: 2.1vw
         font-size: 4.25vmin
         font-weight: 500
         color: var(--white)
+        filter: drop-shadow(2px 2px 0px var(--black))
         letter-spacing: 5px
         &::after
           content: attr(data-content)
@@ -232,10 +232,6 @@
             .icon svg .listDot
               fill: #EDCB8D
           .icon
-            // width: 30px
-            // height: 30px
-            // width: 1.6vw
-            // height: 1.6vw
             width: 3.5vmin
             height: 3.5vmin
             margin-top: 0.1vw
@@ -253,8 +249,6 @@
             gap: 3px
             .title
               position: relative
-              // font-size: 24px
-              // font-size: 1.3vw
               font-size: 2.5vmin
               font-weight: 500
               font-family: "Poller One"
@@ -271,8 +265,6 @@
                 -webkit-text-stroke-color: var(--black)
                 -moz-text-stroke-color: var(--black)
             .text
-              // font-size: 20px
-              // font-size: 1.1vw
               font-size: 2.4vmin
               font-weight: 600
               color: #293A4C
@@ -286,8 +278,6 @@
       position: relative
       transform: scaleY(115%)
       padding: 0 10px
-      // font-size: 36px
-      // font-size: 2vw
       font-size: 4vmin
       font-weight: 500
       font-family: "Racing Sans One"

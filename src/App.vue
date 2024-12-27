@@ -1,6 +1,6 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Mousewheel, Pagination, Navigation } from 'swiper/modules'
+import { FreeMode, Mousewheel, Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -25,7 +25,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Mousewheel, Pagination, Navigation]
+      modules: [FreeMode, Mousewheel, Pagination, Navigation]
     }
   },
   data() {
@@ -169,6 +169,7 @@ export default {
     :slidesPerView="1"
     :spaceBetween="0"
     :speed="600"
+    :rewind="true"
     :mousewheel="true"
     :modules="modules"
     @swiper="onSwiper"
