@@ -150,7 +150,7 @@ export default {
       .hamburgerInner
   .brandGroup
     a.fa-brands.fa-github(href="https://github.com/Yetyaya" target="_blank")
-    a.fa-solid.fa-paperclip(href="https://github.com/Yetyaya/About-Me" target="_blank")
+    a.fa-solid.fa-paperclip(href="https://drive.google.com/file/d/1oy7aEQsKXMK2Ng74ky7nN1ZMVuc_aSs-/view?usp=sharing" target="_blank")
   .hintText
     span SCROLL
     .line
