@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import imagemin from 'unplugin-imagemin/vite'
 import loadEnv from './loadEnv'
 // import vueDevTools from 'vite-plugin-vue-devtools'
 
@@ -9,9 +10,10 @@ import loadEnv from './loadEnv'
 export default defineConfig(({ mode }) => {
   loadEnv(mode)
   return {
-    base: process.env.NODE_ENV === 'production' ? `/${process.env.REPOSITORY_NAME}/` : '/',
+    base: import.meta.NODE_ENV === 'production' ? `/${import.meta.REPOSITORY_NAME}/` : '/',
     plugins: [
-      vue()
+      vue(),
+      imagemin()
       // vueDevTools(),
     ],
     resolve: {
