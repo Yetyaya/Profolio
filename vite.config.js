@@ -10,7 +10,7 @@ import loadEnv from './loadEnv'
 export default defineConfig(({ mode }) => {
   loadEnv(mode)
   return {
-    base: import.meta.NODE_ENV === 'production' ? `/${import.meta.REPOSITORY_NAME}/` : '/',
+    base: process.env.NODE_ENV === 'production' ? `/${process.env.REPOSITORY_NAME}/` : '/',
     plugins: [
       vue(),
       imagemin()
