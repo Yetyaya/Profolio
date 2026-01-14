@@ -184,7 +184,7 @@ export default {
       .hamburgerInner
   .brandGroup
     a.fa-brands.fa-github(href="https://github.com/Yetyaya/About-Me" target="_blank")
-    a.fa-solid.fa-paperclip(href="https://drive.google.com/file/d/1oy7aEQsKXMK2Ng74ky7nN1ZMVuc_aSs-/view?usp=sharing" target="_blank")
+    a.fa-solid.fa-paperclip(href="https://www.figma.com/proto/VxNXmbQqUgTqsMEEOapEHc/2025-%E5%80%8B%E4%BA%BA%E5%B1%A5%E6%AD%B7?page-id=0%3A1&node-id=2-3&viewport=-281%2C375%2C2.06&t=3Pvs93h13aMKF2QG-1&scaling=min-zoom&content-scaling=fixed" target="_blank")
   .hintText
     span SCROLL
     .line
