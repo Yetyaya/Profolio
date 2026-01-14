@@ -39,6 +39,40 @@ export default {
       hamburgerMenu: ['Home', 'About', 'Skill', 'Projects'],
       projectArr: [
         {
+          img: 'poolens',
+          url: 'https://aic.csh.org.tw/poolens/verify',
+          website: {
+            year: 2025,
+            workTime: ['2025/8', '2025/10'],
+            title: 'Poolens',
+            classify: '醫院臨床需求',
+            name: '清腸辨識 '
+          },
+          pointArr: [
+            { title: 'Figma 製作互動式原型', text: '促進同仁與臨床人員的溝通與協作' },
+            { title: '導入 QR Code 掃描功能', text: '建立該院住院病患才能使用該系統的門檻條件' },
+            { title: '提升醫護工作效率', text: '醫護人員能遠端獲取相關資料，有效取代人工查看流程' }
+          ],
+          tagArr: ['Vue.js', 'Sass', 'BarcodeDetector', ' Docker']
+        },
+        {
+          img: 'cshGPT',
+          url: 'https://aic.csh.org.tw/cshGPT/',
+          website: {
+            year: 2025,
+            workTime: ['2025/2', '2025/10'],
+            title: 'cshGPT',
+            classify: '醫院內部系統',
+            name: '醫點家'
+          },
+          pointArr: [
+            { title: '系統架構重構', text: '導入 Vue.js 進行專案架構調整' },
+            { title: '介面優化', text: '對 UI 風格進行統一規範及設計' },
+            { title: 'Figma 製作互動式原型', text: '將複雜的臨床需求視覺化，確保功能與需求一致' }
+          ],
+          tagArr: ['Vue.js', 'Sass', 'axios', ' Docker']
+        },
+        {
           img: 'rinskings',
           url: 'https://yetyaya.github.io/Rinskings/',
           website: {

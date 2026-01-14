@@ -28,13 +28,9 @@ export default {
       .title(:data-content='projectData.website.title') {{ projectData.website.title }}
     .projectDetail
       .topTitle.mobile
-        .workTimeStart
-          span {{ projectData.website.workTime[0] }}
-          hr
+        // .workTime
+        //   span {{ projectData.website.workTime[0] }} ~ {{ projectData.website.workTime[1] }}
         .classify {{ projectData.website.classify }}
-        .workTimeEnd
-          hr
-          span {{ projectData.website.workTime[1] }}
       .classify {{ projectData.website.classify }}
       .name(:data-content='projectData.website.name') {{ projectData.website.name }}
       ul.points
