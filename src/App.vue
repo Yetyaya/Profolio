@@ -5,6 +5,9 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
+import { useThemeStore } from './stores/themeStore'
+
+import ThemeOne from './views/ThemeOne.vue'
 import Home from './views/Home.vue'
 import Intro from './views/Intro.vue'
 import Skill from './views/Skill.vue'
@@ -16,6 +19,7 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
+    ThemeOne,
     Home,
     Intro,
     Skill,
@@ -24,8 +28,10 @@ export default {
     SlidePage
   },
   setup() {
+    const themeStore = useThemeStore()
     return {
-      modules: [FreeMode, Mousewheel, Pagination, Navigation]
+      modules: [FreeMode, Mousewheel, Pagination, Navigation],
+      themeStore
     }
   },
   data() {
@@ -37,6 +43,8 @@ export default {
       animateChange: true,
       showHamburgerMenu: false,
       hamburgerMenu: ['Home', 'About', 'Skill', 'Projects'],
+      lastScrollTop: 0,
+      isScrollingUp: false,
       projectArr: [
         {
           img: 'poolens',
@@ -145,8 +153,17 @@ export default {
       ]
     }
   },
-  mounted() {},
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
+    handleScroll() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
+      this.isScrollingUp = scrollTop === 0
+    },
     onSwiper(swiper) {
       this.swiper = swiper
       this.totalPage = swiper.pagination.bullets.length
@@ -158,6 +175,12 @@ export default {
     slideTo(id) {
       this.swiper.slideTo(id)
       this.showHamburgerMenu = false
+    },
+    toggleThemeIfNeeded(themeNum) {
+      const targetTheme = themeNum === 1 ? 'theme1' : 'theme2'
+      if (this.themeStore.currentTheme !== targetTheme) {
+        this.themeStore.toggleTheme()
+      }
     }
   },
   watch: {
@@ -179,57 +202,148 @@ export default {
 </script>
 
 <template lang="pug">
-  .hamburger(:class="{ active: showHamburgerMenu }" @click="showHamburgerMenu = !showHamburgerMenu")
-    .hamburgerBox
-      .hamburgerInner
-  .brandGroup
-    a.fa-brands.fa-github(href="https://github.com/Yetyaya/About-Me" target="_blank")
-    a.fa-solid.fa-paperclip(href="https://www.figma.com/proto/VxNXmbQqUgTqsMEEOapEHc/2025-%E5%80%8B%E4%BA%BA%E5%B1%A5%E6%AD%B7?page-id=0%3A1&node-id=2-3&viewport=-281%2C375%2C2.06&t=3Pvs93h13aMKF2QG-1&scaling=min-zoom&content-scaling=fixed" target="_blank")
-  .hintText
-    span SCROLL
-    .line
-  transition(name="slide-fade-right")
-    .hamburgerMenu(v-show="showHamburgerMenu")
-      template(v-for="(item, id) in hamburgerMenu")
-        p.stroke.halftone(:name="item" @click="slideTo(id)") {{ item }}
-  //- div
-  //-   a(href="https://vitejs.dev" target="_blank")
-  //-     img.logo(src="/vite.svg" alt="Vite logo")
-  //-   a(href="https://vuejs.org/" target="_blank")
-  //-     img.logo.vue(src="./assets/vue.svg" alt="Vue logo")
-  Swiper(
-    :direction="'vertical'"
-    :pagination="{ clickable: true }"
-    :slidesPerView="1"
-    :spaceBetween="0"
-    :speed="600"
-    :rewind="true"
-    :mousewheel="true"
-    :modules="modules"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
-  )
-    SwiperSlide
-      Home
-    SwiperSlide
-      Intro
-    SwiperSlide
-      Skill
-    SwiperSlide(v-for="project in projectArr")
-      Projects(:projectData="project")
-  SlidePage(:aaa="animateChange" :class="{ active: animateChange }" :currentPage="currentPage" :totalPage="totalPage")
+  .app(:class="`${themeStore.currentTheme}`")
+    //- 主题1
+    template(v-if="themeStore.currentTheme === 'theme1'")
+      .theme1-container
+        .theme-header(:class="{ 'scroll-up': !isScrollingUp }")
+          .theme-container.d-grid.container-80
+            a.header-logo(href="#about-block")
+              img(src="@/assets/theme1/header/logo.webp" alt="hi, i'm yi ting")
+            .header-nav.d-flex
+              .theme-nav.d-flex
+                a(href="#solve-block") 經驗
+                a(href="#project-block") 作品
+                a(href="#skill-block") 技術
+              .theme-toggle
+                template(v-for="num in 2")
+                  button.theme-btn(:class="{ 'active': num === 1 }" @click="toggleThemeIfNeeded(num)")
+                    | {{ num === 1 ? '正式' : '輕快' }}
+        ThemeOne
+
+    //- 主题2
+    template(v-else-if="themeStore.currentTheme === 'theme2'")
+      .theme2-container
+        .theme-header(:class="{ 'scroll-up': !isScrollingUp }")
+          .brandGroup
+            a.fa-brands.fa-github(href="https://github.com/Yetyaya/About-Me" target="_blank")
+            a.fa-solid.fa-paperclip(href="https://drive.google.com/file/d/1205H9ry16_GAADsyWthdzyWj2R6b6Ytm/view?usp=sharing" target="_blank")
+          .theme-toggle
+            template(v-for="num in 2")
+              button.theme-btn(:class="{ 'active': num === 2 }" @click="toggleThemeIfNeeded(num)")
+                | {{ num === 1 ? '正式' : '輕快' }}
+        .hamburger(:class="{ active: showHamburgerMenu }" @click="showHamburgerMenu = !showHamburgerMenu")
+          .hamburgerBox
+            .hamburgerInner
+        .hintText
+          span SCROLL
+          .line
+        transition(name="slide-fade-right")
+          .hamburgerMenu(v-show="showHamburgerMenu")
+            template(v-for="(item, id) in hamburgerMenu")
+              p.stroke.halftone(:name="item" @click="slideTo(id)") {{ item }}
+        Swiper(
+          :direction="'vertical'"
+          :pagination="{ clickable: true }"
+          :slidesPerView="1"
+          :spaceBetween="0"
+          :speed="600"
+          :rewind="true"
+          :mousewheel="true"
+          :modules="modules"
+          @swiper="onSwiper"
+          @slideChange="onSlideChange"
+        )
+          SwiperSlide
+            Home
+          SwiperSlide
+            Intro
+          SwiperSlide
+            Skill
+          SwiperSlide(v-for="project in projectArr")
+            Projects(:projectData="project")
+        SlidePage(:aaa="animateChange" :class="{ active: animateChange }" :currentPage="currentPage" :totalPage="totalPage")
 </template>
 
 <style lang="sass" scoped>
-.logo
-  height: 6em
-  padding: 1.5em
-  will-change: filter
-  transition: filter 300ms
 
-.logo:hover
-  filter: drop-shadow(0 0 2em #646cffaa)
+.app
+  width: 100%
+  &.theme2
+    height: 100vh
 
-.logo.vue:hover
-  filter: drop-shadow(0 0 2em #42b883aa)
+.theme-header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  display: flex
+  justify-content: end
+  z-index: 100
+  pointer-events: none
+
+.brandGroup
+  pointer-events: auto
+
+.theme-toggle
+  display: flex
+  align-items: center
+  pointer-events: auto
+  overflow: hidden
+
+.theme2
+  .theme-header
+    padding: 1.125rem 1.75rem 0 0
+
+  .theme-toggle
+    border: 2px solid var(--black)
+    border-radius: 4px
+    box-shadow: var(--box-shadow)
+
+  .theme-btn
+    padding: 0.5rem 1rem
+    background: transparent
+    color: inherit
+    cursor: pointer
+    font-size: 0.9rem
+    font-weight: 600
+    border-radius: 0
+    transition: all 0.3s ease
+    color: var(--black)
+    background: color-mix(in oklab, var(--blueDeep) 20%, white)
+    &:first-child
+      border-right: 2px solid var(--black)
+      &:hover
+        border-right-color: var(--black)
+
+    &:hover
+      background: color-mix(in oklab, var(--blueDeep) 40%, white)
+      border-color: transparent
+      outline: none
+
+    &.active
+      color: var(--white)
+      background: var(--blueDeep)
+      &:hover
+        background: color-mix(in oklab, var(--blueDeep) 75%, black)
+
+.theme1-container,
+.theme2-container
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.theme2
+  .logo
+    height: 6em
+    padding: 1.5em
+    will-change: filter
+    transition: filter 300ms
+
+  .logo:hover
+    filter: drop-shadow(0 0 2em #646cffaa)
+
+  .logo.vue:hover
+    filter: drop-shadow(0 0 2em #42b883aa)
 </style>
