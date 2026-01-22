@@ -270,7 +270,7 @@ export default {
 .app
   width: 100%
   &.theme2
-    height: 100vh
+    height: 100svh
 
 .theme-header
   position: fixed
