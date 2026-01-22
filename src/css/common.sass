@@ -1,0 +1,685 @@
+:root
+  --TransitionDefault: 0.3s ease
+  // 顏色
+  --ColorPrimary: #F47930
+  --ColorSecondary: #E1442C
+  --ColorThird: #888
+  --ColorBrown: #3D2B1E
+  --ColorPrimaryHover: var(--ColorSecondary)
+  --ColorSecondaryHover: var(--ColorPrimary)
+  // 文字顏色
+  --TextColorPrimary: #222
+  --TextColorSecondary: #333
+  --TextColorThird: #555
+  --TextColorTitle: #555
+  // 邊框
+  --BorderPrimary: 1px solid #CCC
+  --BorderSecondary: 1px solid var(--ColorSecondary)
+  --BorderColorPrimary: #333
+  --BorderColorSecondary: #CCC
+  // 外框按鈕
+  --BtnOutlineTextColor: #333
+  --BtnOutlineBg: #FFFBF3
+  --BtnOutlineHoverTextColor: white
+  --BtnOutlineHoverBg: var(--ColorPrimary)
+  // 主按鈕
+  --BtnPrimaryTextColor: white
+  --BtnPrimaryBg: var(--ColorPrimary)
+  --BtnPrimaryHoverTextColor: white
+  --BtnPrimaryHoverBg: var(--ColorSecondary)
+  // 次要按鈕
+  --BtnSecondaryTextColor: white
+  --BtnSecondaryBg: var(--ColorSecondary)
+  --BtnSecondaryHoverTextColor: white
+  --BtnSecondaryHoverBg: var(--ColorSecondaryHover)
+  // 按鈕共用元素
+  --BtnBorderRadius: 0
+  --BtnWidth: max(12.5vw, 200px)
+  --BtnHeight: 56px
+  --BtnFontSize: 16px
+  --BtnMarginTop: max(0.25vw, 4rem)
+  // 字體
+  --FontFamily: "Onest", "Noto Sans TC", sans-serif
+  --FontFamilyEn: "Onest", sans-serif
+  --FontFamilyTw: "Noto Sans TC", sans-serif
+  // 區塊背景顏色
+  --BlockBgMainColor: #E6F2FF
+  --BlockBgSubColor: #F9F9F9
+  // 裝飾線位移
+  --DecoLineTranslate: max(5vw, 4rem)
+  // 文字大小
+  //螢幕2560px-767px 大小64px-38px
+  --FontSizePrimary: clamp(2.375rem, 1.6799rem + 1.4501vw, 4rem)
+  //螢幕2560px-767px 大小22px-16px
+  --FontSizeSecondary: clamp(1rem, 0.8396rem + 0.3346vw, 1.375rem)
+  //螢幕2560px-767px 大小24px-20px
+  --FontSizeItemTitle: clamp(1.25rem, 1.1431rem + 0.2231vw, 1.5rem)
+  //螢幕2560px-767px 大小22px-18px
+  --FontSizeHint: clamp(1.125rem, 1.0181rem + 0.2231vw, 1.375rem)
+  //螢幕2560px-767px 大小17px-15px
+  --FontSizeBody: clamp(0.9375rem, 0.884rem + 0.1115vw, 1.0625rem)
+  //螢幕2560px-767px 大小30px-24px
+  --FontSizeTitleDeco: clamp(1.5rem, 1.3396rem + 0.3346vw, 1.875rem)
+  //螢幕2560px-1366px 大小17px-15px
+  --FontSizeNavi: clamp(0.9375rem, 0.884rem + 0.1115vw, 1.0625rem)
+
+  // 邊界
+  // 螢幕2560px-1200px 大小160px-60px
+  --SectionPadding: clamp(3.75rem, -1.7647rem + 7.3529vw, 10rem)
+  --SectionTitleBottom: max(4vw, 2rem)
+  --ItemPadding: max(2vw, 1.5rem)
+  --CardPadding: max(1.75vw, 1.25rem)
+  --BlockPadding: max(3vw, 2rem)
+
+  --Space1: 1rem
+  --Space2: max(2vw, 1.5rem)
+  --Space3: max(3vw, 2rem)
+  --Space4: max(4vw, 2.5rem)
+  --Space5: max(5vw, 3rem)
+  --ContainerDefaultWidth: 85%
+
+  // 其他
+  --BorderRadius: 2.5rem
+  --DecoLineWidth: max(5vw, 3rem)
+
+  // 推回中間的時候用
+  --TransformCenter: translateX(-50%) translateY(-50%)
+  --TransformXCenter: translateX(-50%)
+  --TransformYCenter: translateY(-50%)
+  // sns
+  --SnsLine: #06C755
+  --SnsFB: #1877F2
+  --SnsMessenger: linear-gradient(20deg, rgba(0, 153, 255, 1) 0%, rgba(160, 51, 255, 1) 60%, rgba(255, 82, 128, 1) 90%, rgba(255, 112, 97, 1) 100%)
+  --SnsYT: #F03
+  --SnsIG: linear-gradient(45deg, rgba(250, 225, 0, 1) 0%, rgba(252, 183, 32, 1) 15%, rgba(255, 121, 80, 1) 30%, rgba(255, 28, 116, 1) 50%, rgba(108, 28, 209, 1) 100%)
+  --SnsTwitter: #000
+  --SnsShopee: #ED4C2F
+
+.theme1
+  img
+    height: auto
+    max-width: 100%
+    user-select: none
+
+  img.cover
+    width: 100%
+    height: 100%
+    max-width: unset
+    min-height: 100%
+    max-height: 100%
+    object-fit: cover
+
+  .img-radius
+    overflow: hidden
+    border-radius: var(--BorderRadius)
+
+  a, button, button:hover, a:is(:hover, :active, :focus, :visited)
+    transition: var(--TransitionDefault)
+    text-decoration: none
+
+  a:hover, a:focus
+    color: var(--ColorPrimaryHover)
+
+  // 取消掉預設
+  :is(h1, h2, h3, h4, h5, h6, p)
+    margin: 0
+    padding: 0
+
+  .row
+    margin-right: 0
+    margin-left: 0
+
+  .row::before, .row::after
+    display: none
+
+  body.wrapper_bg
+    line-height: 1.5
+    font-size: var(--FontSizeBody)
+    font-family: var(--FontFamily) !important
+    color: var(--TextColorPrimary)
+    letter-spacing: 1px
+    background-repeat: repeat
+
+  .cd-main-content
+    margin-top: calc(var(--NaviHeight) + var(--MarqueeHeight)) !important
+    overflow: hidden
+
+  // 把預設空div拿掉
+  body.wrapper_bg .clear, body.wrapper_bg div[style="clear:both;"]
+    display: none
+
+  .edit_mask
+    display: block !important
+
+  //容器設定
+
+  #RWDfullscreen01 .container
+    width: 100%
+    position: relative
+    z-index: 1
+
+  .container-fluid
+    width: 100%
+    position: relative
+    z-index: 1
+    padding-inline: 0
+
+
+  .container-95
+    width: calc(var(--ContainerDefaultWidth) + 10%)
+    max-width: calc(95% - 30px)
+    position: relative
+    z-index: 1
+    margin: auto
+
+  .container-90
+    width: calc(var(--ContainerDefaultWidth) + 5%)
+    max-width: calc(95% - 30px)
+    position: relative
+    z-index: 1
+    margin: auto
+
+  .container-85
+    width: var(--ContainerDefaultWidth)
+    max-width: calc(95% - 30px)
+    position: relative
+    z-index: 1
+    margin: auto
+
+  .container-80
+    width: calc(var(--ContainerDefaultWidth) - 5%)
+    max-width: calc(95% - 30px)
+    position: relative
+    z-index: 1
+    margin: auto
+
+  .container-75
+    width: calc(var(--ContainerDefaultWidth) - 10%)
+    max-width: calc(95% - 30px)
+    position: relative
+    z-index: 1
+    margin: auto
+
+  .container-70
+    width: calc(var(--ContainerDefaultWidth) - 15%)
+    max-width: calc(95% - 30px)
+    position: relative
+    z-index: 1
+    margin: auto
+
+  .container-65
+    width: calc(var(--ContainerDefaultWidth) - 25%)
+    max-width: calc(95% - 30px)
+    position: relative
+    z-index: 1
+    margin: auto
+
+
+  // 上下區塊邊界
+  .section-spacing
+    padding: var(--SectionPadding) 0
+
+  .section-spacing-top
+    padding-top: var(--SectionPadding)
+
+  .section-spacing-bottom
+    padding-bottom: var(--SectionPadding)
+
+  .default-list
+    display: flex
+    flex-direction: column
+    margin-top: 1rem
+    padding-left: 20px
+    gap: 5px
+
+
+  hr.default-hr
+    margin-top: 2.5rem
+    margin-bottom: 0
+    padding-top: 2.5rem
+    border-top: var(--BorderSecondary)
+
+  // 間距
+  .d-flex
+    display: flex
+    
+  .d-grid
+    display: grid
+
+  .column-one
+    grid-template-columns: 1fr
+
+  .column-half
+    grid-template-columns: 1fr 1fr
+
+  .column-three
+    grid-template-columns: repeat(3, 1fr)
+
+  .column-four
+    grid-template-columns: repeat(4, 1fr)
+
+  .column-five
+    grid-template-columns: repeat(5, 1fr)
+
+  .column-gap-1
+    column-gap: var(--Space1)
+
+  .column-gap-2
+    column-gap: var(--Space2)
+
+  .column-gap-3
+    column-gap: var(--Space3)
+
+  .column-gap-4
+    column-gap: var(--Space4)
+
+  .column-gap-5
+    column-gap: var(--Space5)
+
+  .row-gap-1
+    row-gap: var(--Space1)
+
+  .row-gap-2
+    row-gap: var(--Space2)
+
+  .row-gap-3
+    row-gap: var(--Space3)
+
+  .row-gap-4
+    row-gap: var(--Space4)
+
+  .row-gap-5
+    row-gap: var(--Space5)
+
+  .gap-1
+    gap: var(--Space1)
+
+  .gap-2
+    gap: var(--Space2)
+
+  .gap-3
+    gap: var(--Space3)
+
+  .gap-4
+    gap: var(--Space4)
+
+  .gap-5
+    gap: var(--Space5)
+
+
+
+  .mt-1
+    margin-top: var(--Space1)
+
+  .mt-2
+    margin-top: var(--Space2)
+
+  .mt-3
+    margin-top: var(--Space3)
+
+  .mt-4
+    margin-top: var(--Space4)
+
+  .mt-5
+    margin-top: var(--Space5)
+
+  .m-auto
+    margin-inline: auto
+
+  // 反白顏色設定
+  ::selection
+    color: #FFF
+    background: #555
+
+  ::-moz-selection
+    color: #FFF
+    background: #555
+
+  // 表單
+  input[type=checkbox], input[type=radio]
+    margin: 0 0
+    accent-color: var(--ColorPrimary)
+
+  .customized_columns ._input, .customized_columns select, ::placeholder
+    color: #505050
+
+  // 標題文字
+  .section-title
+    position: relative
+
+  .section-title-bottom
+    margin-bottom: var(--SectionTitleBottom)
+
+  .index .main-title, .main-title
+    margin-top: 0rem
+    margin-bottom: 0
+    line-height: 1.2
+    font-size: var(--FontSizePrimary)
+    font-weight: 700
+    color: #502C21
+    letter-spacing: 0.075em
+
+  .index .sub-title, .sub-title
+    line-height: 1.5
+    font-size: var(--FontSizeSecondary)
+    font-weight: 500
+    color: var(--TextColorSecondary)
+    letter-spacing: 0.075em
+
+  h3 + p
+    margin-top: 1rem
+
+  p + p
+    margin-top: 1.5rem
+
+  .en-title + .main-title
+    margin-top: 8px
+  .main-title + .sub-title
+    margin-top: 8px
+
+  .en-title
+    text-align: center
+    line-height: 1
+    font-size: var(--FontSizeTitleDeco)
+    font-weight: 700
+    font-family: var(--FontFamilyEn) !important
+    color: transparent
+    background: linear-gradient(to right, var(--ColorPrimary), var(--ColorSecondary))
+    letter-spacing: 0
+    text-transform: uppercase
+    background-clip: text
+
+  :is(.main-title, .sub-title, .en-title, p).white
+    color: white !important
+
+  h3
+    line-height: 1.3
+    font-size: var(--FontSizeItemTitle)
+    font-weight: 400
+    color: var(--TextColorTitle)
+    letter-spacing: 1px
+
+  body, input, select, textarea, p, .description
+    line-height: 1.5
+    font-size: var(--FontSizeBody)
+    font-weight: 300
+    font-family: var(--FontFamily) !important
+    color: var(--TextColorSecondary)
+    letter-spacing: 0.05em
+
+  input, select, textarea, p, .description
+    font-size: var(--FontSizeBody)
+
+  .description
+    p
+      margin: 0
+
+  //loading
+  .fl
+    width: max(10vw, 160px)
+
+    img
+      width: 100%
+      animation-name: zeroall
+      animation-duration: 1s
+
+  @keyframes zeroall
+    0%
+      opacity: 0.1
+
+    100%
+      opacity: 1
+
+  @-webkit-keyframes zeroall
+    0%
+      opacity: 0.1
+
+    100%
+      opacity: 1
+
+
+  // btn
+  .btn-group
+    display: flex
+    gap: var(--Space1)
+
+  .btn-group
+    a, .btn
+      width: var(--BtnWidth)
+      min-height: var(--BtnHeight)
+      display: flex
+      justify-content: center
+      align-items: center
+      // margin-top: var(--BtnMarginTop)
+      padding: 0 max(0.75vw, 0.75rem)
+      line-height: 1.6
+      font-size: var(--BtnFontSize)
+      border-radius: 100px
+      border: none
+      transition: var(--TransitionDefault)
+      letter-spacing: 0.05em
+      cursor: pointer
+      
+
+  .btn-group
+    .main-btn
+      color: var(--BtnPrimaryTextColor)
+      background: var(--BtnPrimaryBg)
+
+    .sub-btn
+      color: var(--BtnSecondaryTextColor)
+      background: var(--BtnSecondaryBg)
+
+    .outline-btn
+      border: var(--BorderSecondary)
+      color: var(--BtnSecondaryBg)
+      background: var(--BtnOutlineBg)
+
+    i, img
+      margin-left: 10px
+      transition: var(--TransitionDefault)
+
+  .btn-group-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+
+  // cookie
+  .RWDalert_fancybox
+    .btn, .btn.active
+      margin-top: 0
+      padding: 5px 20px
+      border-radius: 0
+      border-color: var(--BtnPrimaryBg)
+      background: var(--BtnPrimaryBg) !important
+      transition: var(--TransitionDefault)
+
+    .btn:hover
+      border-color: var(--BtnPrimaryHoverBg)
+      background: var(--BtnPrimaryHoverBg) !important
+      transition: var(--TransitionDefault)
+
+    &.bottom
+      width: 500px
+      display: flex
+      flex-direction: column
+      right: unset !important
+      left: 50% !important
+      transform: translateX(-50%)
+      z-index: 99999 !important
+      padding: 50px 75px 40px !important
+      line-height: 1.8 !important
+      border-radius: 0
+      color: #000 !important
+      background: rgba(255, 255, 255, 90%) !important
+      box-shadow: 0 20px 40px rgb(51 51 102 / 60%) !important
+      gap: 1rem
+
+      .editor
+        margin-bottom: 0 !important
+
+        a
+          color: var(--ColorPrimary)
+          text-decoration: underline
+
+          &:hover
+            color: var(--ColorPrimaryHover)
+
+  // go top
+
+  .scrollTop002
+    width: 35px
+    right: calc((var(--DecoLineTranslate) - 35px) / 2)
+    bottom: 100px
+    transition: var(--TransitionDefault)
+
+    .ii
+      font-size: 35px
+      border-radius: 0
+      color: #333
+      background: #EAEAEA
+      transition: var(--TransitionDefault)
+
+      &:hover
+        transition: var(--TransitionDefault)
+        opacity: 1 !important
+
+
+  @media (min-width: 1200px) and (hover: hover) and (pointer: fine)
+    // 按鈕
+
+    .btn-group
+      .main-btn:hover
+        color: var(--BtnPrimaryHoverTextColor)
+        background: var(--BtnPrimaryHoverBg)
+
+      .sub-btn:hover
+        color: var(--BtnSecondaryHoverTextColor)
+        background: var(--BtnSecondaryHoverBg)
+
+      .outline-btn:hover
+        border-color: var(--BtnOutlineHoverBg)
+        color: var(--BtnOutlineHoverTextColor)
+        background: var(--BtnOutlineHoverBg)
+
+  @media (max-width: 1199px)
+    .column-five
+      grid-template-columns: repeat(3, 1fr)
+
+    .text-md-left
+      text-align: left
+
+    .text-md-center
+      text-align: center
+
+
+  @media (max-width: 1024px)
+    .RWDalert_fancybox.bottom
+      width: 100% !important
+      padding: 30px !important
+
+
+  @media (max-width: 991px)
+    .text-sm-left
+      text-align: left
+
+    .text-sm-center
+      text-align: center
+
+    .btn-group-md-center
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .column-half
+      grid-template-columns: 1fr
+
+    .column-three, .column-five, .column-four
+      grid-template-columns: repeat(2, 1fr)
+  @media (max-width: 767px)
+    .text-xs-left
+      text-align: left
+
+    .text-xs-center
+      text-align: center
+  @media (max-width: 650px)
+    .sub-title br, .main-title br
+      display: none
+
+    .column-three, .column-five, .column-four
+      grid-template-columns: 1fr
+
+    .scrollTop002
+      width: var(--DecoLineTranslate)
+      right: calc(var(--DecoLineTranslate) - var(--DecoLineTranslate) / 2)
+
+      .txt
+        font-size: 11px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

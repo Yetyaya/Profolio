@@ -1,0 +1,858 @@
+.theme1-container
+  background: #EEE
+  *
+    font-family: var(--FontFamily)
+
+.theme1
+  .swiper
+    --swiper-pagination-top: 50%
+    --swiper-pagination-bottom: auto
+  .swiper-pagination
+    width: fit-content !important
+    display: flex
+    flex-direction: column
+    position: absolute
+    right: var(--Space1)
+    left: unset !important
+    transform: translateY(-50%)
+    z-index: 10
+    gap: var(--Space1)
+  .swiper-pagination-bullet
+    width: 1rem
+    height: 1rem
+    margin: 0
+    background-color: #2DAD06
+    opacity: 0.35
+  .swiper-pagination-bullet-active
+    background-color: #2DAD06
+    opacity: 0.85
+
+.theme1 .section-title
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.theme1 .theme-header
+  height: 80px
+  transition: var(--TransitionDefault)
+  &.scroll-up
+    background: #FFF
+    box-shadow: 0 0 16px -4px rgba(0, 0, 0, 0.25)
+    transition: var(--TransitionDefault)
+    .theme-container .header-nav .theme-nav a
+      &::after
+        color: #C3B4AF
+    .theme-container .header-nav .theme-toggle button
+      color: var(--ColorSecondary)
+      &.active, &:hover
+        color: #FFF
+
+.theme1 .theme-container
+  grid-template-columns: 1fr 44vw
+  padding-block: var(--Space1)
+  > div
+    pointer-events: auto
+  .header-logo
+    display: flex
+    align-items: center
+    img
+      height: 80%
+      pointer-events: auto
+      aspect-ratio: 273/44
+  .header-nav
+    transform: translateX(calc(var(--Space2) * 1.5))
+    justify-content: space-between
+    align-items: center
+    .theme-nav
+      gap: var(--Space5)
+      a
+        position: relative
+        font-size: var(--FontSizeNavi)
+        color: #2D2117
+        letter-spacing: 0.1em
+        &:hover
+          color: var(--ColorSecondary)
+        &:not(:last-child)
+          &::after
+            content: "ｘ"
+            position: absolute
+            right: calc(var(--Space5) / -1.65)
+            color: #2D2117
+            pointer-events: none
+    .theme-toggle
+      border-radius: 100px
+      border: 1px solid var(--ColorSecondary)
+      button
+        min-height: calc(var(--BtnHeight) * 0.8)
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 max(1.125vw, 0.875rem)
+        line-height: 1.6
+        font-size: var(--FontSizeNavi)
+        border: none
+        color: #2D2117
+        background: transparent
+        transition: var(--TransitionDefault)
+        letter-spacing: 0.05em
+        cursor: pointer
+        &.active
+          color: #FFF
+          background: var(--ColorSecondary)
+        &:hover
+          color: #FFF
+          background: var(--BtnPrimaryBg) !important
+
+.theme1 section#about-block
+  position: relative
+  // height: 100svh
+  padding-bottom: var(--Space3)
+  overflow: hidden
+  .about-bg
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    .bg-left, .bg-right
+      height: 100%
+    .bg-left
+      width: 100%
+      background: #FFFBF3
+      background-image: url("../assets/theme1/section1/dot.webp")
+    .bg-right
+      width: 54%
+      position: absolute
+      top: 0
+      right: 0
+      background: #FED988
+  .about-container
+    // padding-top: 80px
+    grid-template-columns: 1fr calc(46vw * 1450 / 1121)
+    grid-template-areas: "section1-txt section1-img"
+  .about-img
+    width: 100%
+    height: fit-content
+    position: relative
+    transform: translateX(calc(var(--Space2) * 4.5))
+    grid-area: section1-img
+  .about-msg
+    height: 100%
+    display: flex
+    flex-direction: column
+    position: absolute
+    z-index: 1
+    justify-content: center
+    grid-area: section1-txt
+    .btn-group a
+      min-height: calc(var(--BtnHeight) * 1.25)
+      font-size: calc(var(--BtnFontSize) * 1.25)
+  .about-txt
+    margin-block: calc(var(--SectionPadding) * 0.75)
+  .main-title
+    margin-bottom: var(--Space2)
+    font-size: calc(var(--FontSizePrimary) * 1.375)
+    white-space: nowrap
+    color: transparent
+    background: linear-gradient(to right, var(--ColorPrimary), var(--ColorSecondary))
+    background-clip: text
+  .sub-title
+    margin-bottom: var(--Space1)
+    h3
+      font-size: var(--FontSizePrimary)
+      font-weight: 700
+      white-space: nowrap
+      color: var(--ColorPrimary)
+      letter-spacing: 0.05em
+      text-transform: uppercase
+  .description
+    line-height: 1.6
+    p
+      font-size: calc(var(--FontSizeSecondary) * 1.25)
+      font-weight: 600
+      letter-spacing: 0.1em
+
+.theme1 section#solve-block
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-image: url("../assets/theme1/section2/bg.webp")
+  background-attachment: fixed
+  .solve-content
+    gap: var(--Space3)
+    .card
+      height: fit-content
+      flex-direction: column
+      padding: var(--Space2)
+      border-radius: var(--BorderRadius)
+      box-shadow: 0 0 24px -6px rgba(0, 0, 0, 0.25)
+      gap: calc(var(--Space2) * 0.75)
+      &:nth-child(1)
+        background: #FB8945
+      &:nth-child(2)
+        margin-top: var(--Space2)
+        background: #DD5531
+      &:nth-child(3)
+        background: #549424
+      .card-img
+        width: 100%
+        height: max(18vw, 240px)
+        position: relative
+        border-radius: calc(var(--BorderRadius) * 0.675)
+        border-end-start-radius: 0 
+        background-repeat: no-repeat
+        background-size: 100% auto
+        &::after
+          content: ""
+          width: 100%
+          display: block
+          top: 0
+          left: 0
+          aspect-ratio: 47/50
+          background-repeat: no-repeat
+          background-size: 100% auto
+        &.card-img-1
+          background-color: #FFF5E0
+          background-image: url("../assets/theme1/section2/card1.webp")
+          &::after
+            background-image: url("../assets/theme1/section2/card1-txt.webp")
+        &.card-img-2
+          background-color: #FFE5CB
+          background-image: url("../assets/theme1/section2/card2.webp")
+          &::after
+            background-image: url("../assets/theme1/section2/card2-txt.webp")
+        &.card-img-3
+          background-color: #ECFFE9
+          background-image: url("../assets/theme1/section2/card3.webp")
+          &::after
+            background-image: url("../assets/theme1/section2/card3-txt.webp")
+      .card-txt
+        .card-title
+          margin-bottom: calc(var(--Space1) * 0.75)
+          text-align: center
+          line-height: 1.2
+          font-size: var(--FontSizeItemTitle)
+          font-weight: 500
+          color: #FFF
+          letter-spacing: 0.1em
+        .description
+          color: #FFF
+
+.theme1 section#project-block
+  position: relative
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-image: url("../assets/theme1/section3/bg.webp")
+  &::before, &::after
+    content: ""
+    width: var(--DecoLineWidth)
+    height: 100%
+    position: absolute
+    top: 0
+  &::before
+    left: 0
+    border-right: var(--BorderPrimary)
+  &::after
+    right: 0
+    border-left: var(--BorderPrimary)
+  .project-content
+    display: flex
+    flex-direction: column
+    gap: var(--SectionPadding)
+    .card
+      position: relative
+      background: #FFF
+      box-shadow: 0 0 24px 0 rgb(0 0 0 / 25%)
+      transition: var(--TransitionDefault)
+      grid-template-columns: 1.5fr 1fr
+      grid-template-areas: "project-img project-text"
+      &:hover
+        box-shadow: 0 0 24px -4px rgb(0 0 0 / 25%)
+        transition: var(--TransitionDefault)
+    .card-img
+      width: 100%
+      height: 100%
+      min-height: 500px
+      position: absolute
+      grid-area: project-img
+      .swiper
+        width: 100%
+        height: 100%
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+    .card-txt
+      grid-area: project-text
+    .card-header
+      padding: var(--Space2)
+    .card-id
+      display: flex
+      align-items: baseline
+      margin-bottom: calc(var(--Space1) / 2)
+      line-height: 1.2
+      font-size: var(--FontSizeItemTitle)
+      font-weight: 700
+      color: #CCC
+      text-transform: uppercase
+      gap: calc(var(--Space1) / 2)
+      .num
+        font-size: calc(var(--FontSizeItemTitle) * 1.5)
+    .card-title
+      justify-content: space-between
+      padding-bottom: var(--Space1)
+      line-height: 1.2
+      border-bottom: var(--BorderPrimary)
+      letter-spacing: 0.1em
+      .title
+        font-size: calc(var(--FontSizeItemTitle) * 1.33)
+        font-weight: 700
+        color: var(--ColorBrown)
+      .tag
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: calc(var(--Space1) / 2) var(--Space1)
+        font-size: calc(var(--FontSizeItemTitle) * 0.625)
+        border-radius: 8px
+        color: var(--TextColorSecondary)
+        background: #E9E8E8
+    .card-content
+      display: flex
+      flex-direction: column
+      padding: 0 var(--Space2) var(--Space2)
+      color: var(--TextColorPrimary)
+      gap: var(--Space2)
+    .item
+      display: flex
+      flex-direction: column
+      gap: var(--Space1)
+      letter-spacing: 0.1em
+      .item-title
+        line-height: 1.2
+        font-size: calc(var(--FontSizeItemTitle) * 0.84)
+        font-weight: 700
+        color: var(--ColorBrown)
+      .item-txt
+        display: flex
+        flex-direction: column
+        gap: calc(var(--Space1) / 2)
+        div
+          line-height: 1.5
+          font-size: var(--FontSizeBody)
+    .card-footer
+      padding: var(--Space2)
+      background: var(--ColorPrimary)
+      .item
+        .item-title
+          font-weight: 500
+          color: #FFF
+        .item-txt
+          font-size: var(--FontSizeBody)
+          font-weight: 300
+          color: #FFF
+    .btn-group
+      margin-top: calc(var(--Space2) * 0.75)
+      .btn
+        justify-content: space-between
+        padding-left: calc(var(--Space1) * 1.5)
+        color: var(--ColorPrimary)
+        background: #FFF
+        .icon
+          width: 18px
+          aspect-ratio: 1/1
+          background-repeat: no-repeat
+          background-size: contain
+          background-image: url("../assets/theme1/section3/arrow.webp")
+        &:hover
+          box-shadow: 0 0 8px rgb(0 0 0 / 25%)
+          transition: var(--TransitionDefault)
+
+.theme1 section#skill-block
+  position: relative
+  background-attachment: fixed
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  background-color: #3C2A22
+  background-image: url("../assets/theme1/section4/bg.png")
+  background-blend-mode: multiply
+  .main-title, .sub-title
+    color: #FFF
+  .skill-content
+    display: flex
+    flex-direction: column
+    gap: var(--Space3)
+    .card
+      position: sticky
+      top: 100px
+      background: #FFF
+      background-repeat: no-repeat
+      background-position: 96% 100%
+      &:nth-child(1)
+        background-image: url("../assets/theme1/section4/image1.webp")
+      &:nth-child(2)
+        top: 230px
+        background-image: url("../assets/theme1/section4/image2.webp")
+      &:nth-child(3)
+        top: 360px
+        background-image: url("../assets/theme1/section4/image3.webp")
+      &:nth-child(4)
+        top: 490px
+        background-image: url("../assets/theme1/section4/image4.webp")
+      .card-header
+        padding: var(--Space2) var(--Space3)
+      .card-en-title
+        margin-bottom: calc(var(--Space1) / 2)
+        line-height: 1.2
+        font-size: var(--FontSizeItemTitle)
+        font-weight: 700
+        color: #CCC
+        text-transform: uppercase
+      .card-title
+        padding-bottom: var(--Space1)
+        line-height: 1.2
+        font-size: calc(var(--FontSizeItemTitle) * 1.33)
+        font-weight: 700
+        border-bottom: var(--BorderPrimary)
+        color: var(--ColorBrown)
+      .card-content
+        padding: 0 var(--Space3) var(--Space3)
+        grid-template-columns: 1fr 1fr
+        gap: var(--Space2) var(--Space4)
+      .item
+        letter-spacing: 0.1em
+        .item-title
+          align-items: center
+          margin-bottom: calc(var(--Space1) * 1.25)
+          line-height: 1.2
+          font-size: calc(var(--FontSizeItemTitle) * 0.84)
+          font-weight: 700
+          color: var(--ColorBrown)
+          letter-spacing: 0.075em
+          gap: calc(var(--Space1) / 1.5)
+          .icon
+            width: 14px
+            aspect-ratio: 16/19
+            background-size: contain
+            background-repeat: no-repeat
+            background-image: url("../assets/theme1/section4/arrow.webp")
+        .item-txt
+          line-height: 1.5
+          font-size: var(--FontSizeBody)
+          color: var(--TextColorPrimary)
+          letter-spacing: 0.1em
+
+.theme1 footer
+  background: #DD5531
+  background-repeat: no-repeat
+  background-size: auto 70%
+  background-position: 100% 100%
+  background-image: url("../assets/theme1/footer/bg.webp")
+  .footer-content
+    align-items: end
+    padding-bottom: var(--Space4)
+    border-bottom: 1px solid rgb(232 232 232 /0.25)
+    grid-template-columns: 1fr max-content
+  .contact-info
+    width: 100%
+    grid-template-columns: min-content auto
+    gap: var(--Space2)
+    .my-photo
+      width: max(10vw, 8rem)
+      overflow: hidden
+      border-radius: 50%
+      aspect-ratio: 1/1
+    .section-title
+      justify-content: center
+      align-items: start
+    .en-title
+      font-size: calc(var(--FontSizeTitleDeco) * 0.75)
+    .en-title, .main-title
+      font-weight: 500
+    .en-title, .main-title, .item
+      color: #E9E8E8
+    .main-title
+      margin-bottom: calc(var(--Space1) * 2)
+      font-size: calc(var(--FontSizePrimary) * 0.75)
+    .info-list
+      width: 100%
+      justify-content: space-between
+      align-items: center
+    .item
+      gap: var(--Space1)
+      .icon
+        width: 1.5rem
+        margin-left: 2px
+        aspect-ratio: 1/1
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        background-image: url("../assets/theme1/footer/email.webp")
+      .info
+        font-size: var(--FontSizeSecondary)
+        font-weight: 300
+        color: #E9E8E8
+        letter-spacing: 0.05em
+    .sns-group
+      gap: calc(var(--Space2) * 0.75)
+      .icon
+        height: max(2vw, 1.5rem)
+        aspect-ratio: 1/1
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+        &:hover
+          filter: drop-shadow(0px 0px 4px rgb(0 0 0 / 0.25))
+        &.github
+          background-image: url("../assets/theme1/footer/github.png")
+        &.cakeresume
+          aspect-ratio: 113/40
+          background-image: url("../assets/theme1/footer/cakeresume.png")
+        &.linkedin
+          background-image: url("../assets/theme1/footer/linkedin.png")
+  .copyrights
+    padding-block: var(--Space1)
+    p
+      font-weight: 200
+      color: #E9E8E8
+
+@media (max-width: 1900px)
+  .theme1 section#about-block
+    padding-top: var(--Space2)
+
+@media (max-width: 1680px)
+
+@media (max-width: 1600px)
+  .theme1 section#about-block
+    .main-title
+      margin-bottom: calc(var(--Space2) * 0.75)
+      font-size: calc(var(--FontSizePrimary) * 1.15)
+    .sub-title h3
+      font-size: calc(var(--FontSizePrimary) * 0.8)
+    .description p
+      font-size: calc(var(--FontSizeSecondary) * 1.15)
+    .about-msg .btn-group a
+      min-height: calc(var(--BtnHeight) * 1.15)
+      font-size: calc(var(--BtnFontSize) * 1.15)
+
+@media (max-width: 1536px)
+  .theme1 section#project-block
+    .container-70
+      width: 75%
+    .project-content .card
+      grid-template-columns: 1.2fr 1fr
+
+@media (max-width: 1440px)
+  .theme1 section#skill-block .container-65
+    width: 70%
+
+@media (max-width: 1366px)
+  .theme1 section#about-block
+    padding-block: var(--Space4)
+
+  .theme1 section#project-block .container-70
+    width: 80%
+
+// ipad pro 橫式 
+@media (width: 1366px) and (height: 1024px)
+
+@media (max-width: 1199px)
+  .theme1 .theme-container .header-logo img
+      height: 70%
+
+  .theme1 section#about-block
+    padding-block: calc(var(--Space5) * 1.25)
+    .main-title
+      margin-bottom: calc(var(--Space2) * 0.5)
+      font-size: calc(var(--FontSizePrimary) * 1)
+    .sub-title h3
+      font-size: calc(var(--FontSizePrimary) * 0.7)
+    .description p
+      font-size: calc(var(--FontSizeSecondary) * 0.95)
+    .about-msg .btn-group a
+      min-height: calc(var(--BtnHeight) * 1.05)
+      font-size: calc(var(--BtnFontSize) * 1.05)
+
+  .theme1 section#solve-block .container-70
+    width: 80%
+
+  .theme1 section#project-block
+    .container-70
+      width: 70%
+    .project-content
+      .card
+        grid-template-columns: auto
+        grid-template-rows: 140px 1fr
+        grid-template-areas: "project-img""project-text"
+      .card-img
+        min-height: 140px
+      .card-txt
+        display: grid
+        grid-template-rows: min-content 1fr
+        grid-template-columns: 1fr min-content
+        grid-template-areas: "header header" "content result"
+      .card-title
+        border: none
+      .card-header
+        padding-bottom: 0
+        grid-area: header
+      .card-content
+        padding-top: var(--Space2)
+        border-top: var(--BorderPrimary)
+        grid-area: content
+      .card-footer
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        grid-area: result
+      .btn-group .btn
+        width: max(16vw, 150px)
+
+  .theme1 section#skill-block .container-65
+    width: 75%
+        
+@media (max-width: 1024px)
+  .theme1 section#about-block
+    .about-txt
+      margin-block: calc(var(--SectionPadding) * 0.6)
+    .main-title
+      font-size: calc(var(--FontSizePrimary) * 0.85)
+    .sub-title h3
+      font-size: calc(var(--FontSizePrimary) * 0.625)
+    .description p
+      font-size: calc(var(--FontSizeSecondary) * 0.85)
+    .about-msg .btn-group a
+      min-height: calc(var(--BtnHeight) * 1)
+      font-size: calc(var(--BtnFontSize) * 1)
+    .about-img
+      transform: translateX(calc(var(--Space2) * 3.5))
+
+  .theme1 section#skill-block .container-65
+    width: 80%
+
+// ipad pro 直式 
+@media (width: 1024px) and (height: 1366px)
+
+@media (max-width: 991px)
+  .theme1 .theme-container .header-logo img
+    height: 50%
+  .theme1 .theme-container .header-nav .theme-toggle button
+    min-height: calc(var(--BtnHeight) * 0.7)
+
+  .theme1 section#about-block .about-img
+    transform: translateX(calc(var(--Space2) * 3.25))
+
+  .theme1 section#solve-block .solve-content
+    gap: var(--Space1)
+    .card
+      padding: var(--Space1)
+      padding-bottom: var(--Space2)
+      &:nth-child(2)
+        margin-top: 0
+      .card-img
+        height: max(20vw, 170px)
+
+  .theme1 section#project-block .project-content
+    .card-txt
+      grid-template-rows: min-content min-content 1fr
+      grid-template-columns: auto
+      grid-template-areas: "header" "content" "result"
+    .btn-group .btn
+        width: var(--BtnWidth)
+
+  .theme1 section#skill-block .container-65
+    width: 70%
+  .theme1 section#skill-block .skill-content
+    .card
+      &:nth-child(2), &:nth-child(3), &:nth-child(4)
+        top: 100px
+      .card-header
+        padding: var(--Space3) var(--Space4)
+      .card-content
+        padding: 0 var(--Space4) var(--Space4)
+        grid-template-columns: auto
+        gap: var(--Space3)
+
+@media (max-width: 850px)
+  .theme1 .theme-container
+    grid-template-columns: 1fr 46vw
+
+@media (max-width: 768px)
+
+@media (max-width: 767px)
+  .theme1 .theme-container.container-80
+    width: 90%
+  .theme1 .theme-container .header-nav
+    transform: unset
+  .theme1 .theme-container
+    grid-template-columns: auto auto
+
+  .theme1 section#about-block
+    padding-block: calc(var(--Space5) * 1.375)
+    .about-bg .bg-right
+      width: 100%
+      top: 58.5%
+      bottom: 0
+    .about-container
+      width: 90%
+      grid-template-columns: auto
+      grid-template-areas: "section1-txt""section1-img"
+      grid-template-rows: min-content min-content
+    .about-msg
+      width: 100%
+      justify-content: space-between
+      align-items: center
+    .about-txt
+      display: flex
+      flex-direction: column
+      text-align: center
+    .main-title
+      display: flex
+      order: 2
+      justify-content: center
+      margin-bottom: calc(var(--Space1) * 0.5)
+      font-size: calc(var(--FontSizePrimary) * 0.65)
+    .sub-title
+      order: 1
+      margin-bottom: calc(var(--Space1) * 0.5)
+      h3
+        font-size: calc(var(--FontSizePrimary) * 0.45)
+    .description
+      order: 3
+    .about-img
+      transform: translateX(calc(var(--Space2) * 1.25))
+      padding-top: max(11rem, 160px)
+      grid-area: section1-txt
+    .about-msg .btn-group
+      transform: translateY(var(--Space2))
+
+  .theme1 section#solve-block
+    .container-70
+      width: 70%
+    .solve-content
+      flex-direction: column
+      .card
+        flex-direction: row
+        padding: var(--Space1)
+        gap: var(--Space1)
+        .card-img
+          width: 150%
+          aspect-ratio: 47 / 60
+          border-end-end-radius: 0 
+          border-end-start-radius: calc(var(--BorderRadius) * 0.675)
+          background-position: center bottom
+          background-size: 110%
+        .card-txt
+          padding-block: 1rem
+          .card-title
+            text-align: left
+
+  .theme1 section#skill-block .container-65
+    width: 80%
+  .theme1 section#skill-block .skill-content .card
+    position: relative
+    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+      top: unset
+
+  .theme1 footer .contact-info .info-list
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    gap: calc(var(--Space1) / 2)
+  .theme1 footer .contact-info .sns-group
+    gap: var(--Space1)
+
+@media screen and (min-width: 415px) and (max-width: 767px)
+
+@media (max-width: 650px)
+  .theme1 .theme-container .header-nav .theme-nav
+    display: none
+  .theme1 .theme-container .header-nav
+    justify-content: end
+
+  .theme1 section#about-block
+    .about-container
+      width: 100%
+      max-width: 100%
+    .about-img
+      transform: scale(1.25)
+      padding-top: max(12.5rem, 160px)
+
+  .theme1 section#solve-block .container-70
+    width: 75%
+
+@media (max-width: 600px)
+  :root
+    --DecoLineWidth: max(18vw, 4rem)
+
+  .theme1 section#project-block
+    .container-70
+      width: 80%
+    .project-content
+      .card-id
+        justify-content: center
+      .card-title
+        flex-direction: column
+        gap: 0.5rem
+        .title
+          text-align: center
+      .card-content
+        padding-top: 0.5rem
+        border-top: none
+      .card-header
+        padding-top: 1rem
+      .btn-group
+        justify-content: center
+      
+@media (max-width: 500px)
+  .theme1 footer .contact-info
+    grid-template-columns: auto
+
+  .theme1 section#solve-block .container-70
+    width: 85%
+  .theme1 section#solve-block .solve-content .card
+    flex-direction: column
+    padding-bottom: var(--Space2)
+    .card-img
+      width: 100%
+      border-end-start-radius: 0
+      &::after
+        width: 82%
+    .card-txt
+      text-align: center
+      padding-block: 0
+      padding-inline: var(--Space1)
+      .card-title
+        text-align: center
+
+  .theme1 section#project-block .container-70
+    width: 86%
+
+@media (max-width: 480px)
+  .theme1 section#project-block .container-70
+    width: 90%
+  
+  .theme1 section#skill-block .container-65
+    width: 90%
+
+  .theme1 section#skill-block .skill-content
+    .card
+      .card-header
+        padding: var(--Space2) var(--Space3)
+      .card-content
+        padding: 0 var(--Space2) var(--Space3)
+
+
+@media (max-width: 414px)
+  .theme1 section#about-block .about-img
+      transform: scale(1.375)
+
+@media (max-width: 380px)
+
+
+
+

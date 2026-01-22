@@ -30,7 +30,27 @@
 //         .title
 //           font-size: 10vmin
 
-// @media (max-width: 1560px)
+@media (max-width: 1700px)
+  .homePage
+    .svgBackground
+      .icon_window4
+        top: 42.96vmin
+      .icon_sticker
+        top: 64.1vmin
+
+  .introPage
+    .svgBackground
+      .icon_fileBack
+        left: max(12vw, 16px)
+      .icon_fileFront
+        right: max(25vw, 16px)
+      .icon_msg_star
+        top: 8vmin
+      // .icon_myPhoto
+      //   right: 5vw
+    .letter
+      left: max(15vw, 16px)
+
 //   .homePage
 //     .svgBackground
 //       .icon_sun
@@ -75,36 +95,22 @@
 //         .tags li
 //           font-size: 3.7vmin
 
-@media (max-width: 1400px)
+@media (max-width: 1440px)
   .homePage
+    h1
+      right: 12vmin
+    h2
+      right: 14vmin
     .svgBackground
-      .icon_window4
-        top: 42.96vmin
-      .icon_sticker
-        top: 64.1vmin
+      .icon_msg_heart
+        right: 45vmin
 
   .introPage
-    .textBg
-      .info
-        width: 200vmin
     .svgBackground
-      .paper1, .paper2
-        display: none
-      .icon_pen
-        right: 10vmin
       .icon_myPhoto
-        right: 9vmin
-      .icon_fileBack
-        height: 73vmin
-        right: unset
-        left: 20vmin
-      .icon_fileFront
-        right: 31.5vmin
+        right: max(6vw, 16px)
     .letter
-      width: 75vmin
-      right: unset
-      left: 14vmin
-      padding: 5vmin 11vmin 5vmin 5vmin
+      padding-right: 6%
 
   .skillPage
     .mySelfImage
@@ -183,27 +189,7 @@
     100%
       clip-path: polygon(0% 0%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%)
 
-@media (max-width: 1350px)
-  .introPage
-    .svgBackground
-      .icon_email, .icon_msg_star
-        display: none
-    .letter
-      width: 47%
-      padding: 5vmin 11% 5vmin 5vmin
-
-@media (max-width: 1200px)
-  .introPage
-    .svgBackground
-      .icon_email, .icon_msg_star
-        display: none
-      .icon_fileFront
-        bottom: 10.5vmin
-    .letter
-      bottom: 14vmin
-      padding: 5vmin 15% 5vmin 5vmin
-
-@media (max-width: 1100px)
+@media (max-width: 1366px)
   .homePage
     h1
       top: 69vmin
@@ -214,16 +200,90 @@
     .svgBackground
       .icon_msg_heart
         top: 54vmin
-        right: 31.5vmin
+        right: 36.5vmin
       .icon_window3
-        left: 16.5vmin
+        left: 14.5vmin
       .icon_rainbow
         left: 14.2vmin
+      .icon_cloud_large
+        left: 9vmin
+      .icon_cloud_small
+        left: 12vmin
       .icon_sun
         top: 18vmin
         right: 8vmin
+      .icon_sticker
+        left: 10vmin
+      .icon_range
+        left: 17vmin
       .icon_window1
-        left: 25vmin
+        left: 28vmin
+      .icon_msg_hello
+        left: 72.5vmin
+
+  .introPage
+    .svgBackground
+      .icon_email, .icon_msg_star
+        display: none
+      .icon_fileBack
+        left: max(13vw, 16px)
+      .icon_myPhoto
+        height: 70vh
+        bottom: 15vh
+      .icon_fileFront
+        right: max(20vw, 16px)
+      .paper1
+        display: none
+    .letter
+      width: 47%
+      left: max(10.5vw, 16px)
+
+@media (max-width: 1250px)
+  .introPage
+    .letter
+      padding-right: 10%
+
+@media (max-width: 1200px)
+  .introPage
+    .svgBackground
+      .icon_email, .icon_msg_star
+        display: none
+      .icon_myPhoto
+        right: max(2vw, 16px)
+      .paper1
+        display: none
+      .icon_search
+        top: 14.5vmin
+    .letter
+      left: max(10.5vw, 16px)
+      padding-right: 5vmin
+
+@media (max-width: 1100px)
+  .homePage
+    h1
+      right: 8vmin
+    h2
+      right: 9vmin
+    .svgBackground
+      .icon_msg_heart
+        right: 31.5vmin
+      .icon_window3
+        left: 14.5vmin
+      .icon_rainbow
+        left: 14.2vmin
+      .icon_cloud_large
+        left: 9vmin
+      .icon_cloud_small
+        left: 12vmin
+      .icon_sun
+        top: 18vmin
+        right: 8vmin
+      .icon_sticker
+        left: 10vmin
+      .icon_range
+        left: 17vmin
+      .icon_window1
+        left: 28vmin
       .icon_msg_hello
         left: 72.5vmin
 
@@ -233,12 +293,11 @@
   .introPage
     .svgBackground
       .icon_pen
-        top: 21vmin
-        right: unset
-        bottom: unset
-        left: 8vmin
+        display: none
       .icon_grid
         right: 10vmin
+      .icon_search
+        right: 12vmin
       .icon_myPhoto
         height: 66vmin
         right: 3vmin
@@ -247,9 +306,12 @@
         left: 15vmin
       .icon_fileFront
         height: 22vmin
-        right: 22.5vmin
+        right: 16vmin
+      .paper2
+        display: none
     .letter
       width: 50%
+      bottom: 8vh
       left: 12vmin
       padding: 5vmin 9vmin 5vmin 5vmin
 
@@ -339,24 +401,44 @@
         right: 19.13vmin
 
   .introPage
+    .textBg
+      transform: scale(1.75)
     .svgBackground
-      .icon_pen
-        display: none
+      .paper1
+        height: max(13.5vw, 150px)
+        display: block
+        left: 2vmin
+      .icon_search
+        top: 17vmin
+      .icon_grid
+        top: 24vmin
       .icon_fileBack
-        height: 68vmin
-        bottom: 38vmin
-        left: 8vmin
+        width: 80%
+        height: unset
+        top: 48%
+        right: 0
+        left: 0
+        transform: translateY(-50%) !important
+        margin-inline: auto
       .icon_myPhoto
-        height: 61vmin
-        right: 2vmin
-        bottom: 33vmin
+        height: 56vmin
+        display: none
+        top: 50%
+        right: 11vmin
+        transform: translateY(-100%) !important
       .icon_fileFront
-        height: 20vmin
-        right: 18.5vmin
-        bottom: 25.5vmin
+        display: none
     .letter
-      bottom: 30vmin
-
+      width: 68%
+      max-width: unset
+      min-height: fit-content
+      top: 54%
+      right: 0
+      left: 0
+      transform: translateY(-50%)
+      padding: 5vmin 5vmin 10vmin 5vmin
+      margin-inline: auto
+  
   .skillPage
     .svgBackground
       .icon_rainbow2
@@ -377,21 +459,6 @@
 
   .pageTitle
     font-size: 13vmin
-
-  .introPage
-    .svgBackground
-      .icon_fileBack
-        bottom: 26vmin
-      .icon_myPhoto
-        bottom: 21vmin
-      .icon_fileFront
-        bottom: 10vmin
-    .letter
-      li
-        p
-          font-size: 2.7vmin
-          &.firstLine
-            font-size: 4.1vmin
 
   .skillPage
     .svgBackground
@@ -479,58 +546,6 @@
       .icon_rainbow
         left: 13vmin
 
-  .introPage
-    .pageTitle
-      top: 18vmin
-      right: unset
-      bottom: unset
-      left: 18vmin
-      font-size: 15vmin
-    .svgBackground
-      .shine3
-        top: unset
-        bottom: 6.5vmin
-        left: 34.3vmin
-      .shine4
-        top: unset
-        bottom: 5vmin
-        left: 25vmin
-      .shine5
-        top: 19.6vmin
-        right: 1.04vmin
-      .shine6
-        top: 10.5vmin
-        right: 60vmin
-      .paper1
-        height: 26vmin
-        display: block
-        bottom: 3vmin
-        left: -2.5vmin
-      .paper2
-        display: none
-      .icon_email
-        height: 18vmin
-        display: block
-        top: 12vmin
-        left: 11vmin
-      .icon_grid
-        top: 16.06vmin
-      .icon_fileBack
-        height: 75vmin
-        bottom: 28vmin
-        left: 4vmin
-      .icon_myPhoto
-        height: 68vmin
-        right: 8vmin
-        bottom: 57vmin
-        z-index: 0
-      .icon_fileFront
-        bottom: 13vmin
-    .letter
-      width: 78%
-      bottom: 22vmin
-      padding: 5.5vmin 5vmin 12vmin 5vmin
-
   .skillPage
     .pageTitle
       flex-direction: row
@@ -609,22 +624,6 @@
       .shine4
         bottom: 10vmin
         left: 26.3vmin
-
-  .introPage
-    .svgBackground
-      .icon_email
-        top: 16vmin
-      .icon_grid
-        top: 24vmin
-      .icon_fileBack
-        bottom: 32vmin
-      .icon_myPhoto
-        bottom: 65vmin
-      .icon_fileFront
-        bottom: 15vmin
-    .letter
-      bottom: 25vmin
-      padding: 5.5vmin 7vmin 9vmin
 
   .skillPage
     .skillList
@@ -707,18 +706,18 @@
         top: 28vmin
 
   .introPage
-    .svgBackground
-      .paper1
-        bottom: 8.5vmin
-      .icon_fileBack
-        bottom: 42vmin
-      .icon_myPhoto
-        bottom: 79vmin
-      .icon_fileFront
-        bottom: 19vmin
+    .textBg
+      transform: scale(3) translateY(3%)
+    .pageTitle
+      width: fit-content
+      flex-direction: row
+      top: 12%
+      left: 50%
+      transform: translateX(-50%)
+      font-size: 14vmin
+      gap: 16px
     .letter
-      bottom: 28vmin
-      padding: 5.5vmin 7vmin 9vmin
+      // padding: 5.5vmin 7vmin 9vmin
       li
         p
           font-size: 3vmin
@@ -768,7 +767,7 @@
     margin-bottom: 8px
 
 // iPad
-@media (max-width: 1024px) and (max-height: 768px)
+@media (max-width: 1024px) and (min-height: 768px) and (max-height: 769px)
   .homePage
     h1
       bottom: 7%
@@ -796,18 +795,28 @@
 
   .introPage
     .svgBackground
+      .icon_search
+        top: 14vmin
+        right: 20vmin
+        left: unset
       .icon_fileBack
-        bottom: 20%
-        left: 9%
+        height: 73vmin
       .icon_myPhoto
-        right: 9%
-        bottom: 21%
+        height: 66vmin
+        display: block
+        transform: translateY(-50%) !important
       .icon_fileFront
-        right: 21.5%
-        bottom: 16.5%
+        height: 20vmin
+        display: block
+        right: 22.5%
+        bottom: 15.5%
     .letter
-      bottom: 13%
-      left: 12%
+      width: 50%
+      top: 54%
+      left: 12vmin
+      z-index: 0
+      padding: 5vmin 9vmin 5vmin 5vmin
+      margin-inline: unset
 
   .skillPage
     .svgBackground
@@ -872,24 +881,25 @@
         top: 19%
 
   .introPage
+    .textBg
+      transform: scale(2.5)
     .svgBackground
       .icon_search
         top: 13%
         right: 10%
       .icon_fileBack
-        height: 49%
-        bottom: 33%
-        left: 5%
-      .icon_myPhoto
-        right: 2%
-        bottom: 30%
+        width: 84%
+        left: 50%
+        transform: translate(-50%, -50%) !important
+      .paper1
+        display: none
       .icon_fileFront
         right: 20%
         bottom: 20%
     .letter
-      bottom: 50%
-      left: 10%
-      transform: translateY(50%)
+      width: 90%
+      top: 50%
+      padding: 6vmin 6vmin 10vmin 6vmin
 
   .projectPage
     .gotoWeb.mobile
@@ -968,8 +978,6 @@
       .icon_search
         top: 13.5%
       .icon_fileBack
-        height: 66%
-        bottom: 18%
       .icon_myPhoto
         right: 5%
         bottom: 17%
@@ -978,8 +986,7 @@
         right: 24%
         bottom: 8.8%
     .letter
-      width: 60%
-      padding: 5.5% 15% 9% 7%
+      padding: 5.5% 15% 5.5% 7%
 
   .skillPage
     .pageTitle
@@ -1081,28 +1088,30 @@
 
   .introPage
     .pageTitle
-      top: 8%
+      width: fit-content
+      flex-direction: row
+      top: 12%
+      left: 50%
+      transform: translateX(-50%)
       font-size: 14vmin
+      gap: 16px
     .svgBackground
-      .paper1
-        bottom: -1.5%
-      .icon_email
-        top: 13%
-        left: 8%
-      .icon_search
-        top: 13%
+      .paper1, .icon_search
+        display: none
       .icon_fileBack
-        height: 53%
-        bottom: 24%
+        width: 125%
+        top: 52%
+        left: 50%
+        transform: translate(-50%, -50%) !important
       .icon_myPhoto
         display: none
-      .icon_fileFront
-        right: 5%
-        bottom: 14%
+    .letter
+      width: 84%
+      top: 56%
 
   .skillPage
     .pageTitle
-      top: 8%
+      top: 12%
       font-size: 14vmin
     .skillList
       top: 55%
@@ -1144,7 +1153,7 @@
               .text
                 font-size: 3vmin
 
-@media (max-width: 430px)
+@media (max-width: 440px)
   \:root
     --swiper-pagination-left: 5vw
     --swiper-pagination-bullet-width: 5vw
@@ -1157,17 +1166,8 @@
       font-size: 6vw
       &.fa-paperclip
         font-size: 5vw
-  .hamburgerMenu
-    justify-content: flex-end
-    align-items: flex-end
-    padding: 0 8% 18% 0
-    user-select: none
-    p
-      line-height: 1
-      font-size: 14vw
-      &.halftone
-        &::after
-          font-size: 14vw
+  .hamburger
+    display: none
 
   .homePage
     h1
@@ -1175,11 +1175,10 @@
       bottom: 15%
     h2
       bottom: 26%
+      font-size: 17vmin
     .svgBackground
       .icon_msg_heart
-        height: 5%
-        right: 32.5%
-        bottom: 33%
+        display: none
       .shine1, .shine2, .shine3, .shine4, .shine5, .shine6
         height: 6%
       .shine1
@@ -1199,9 +1198,7 @@
         top: 12%
         right: 20%
       .icon_sun
-        height: 8.5%
-        top: 9%
-        right: 44%
+        display: none
       .icon_window1
         height: 48%
         top: 28%
@@ -1230,27 +1227,15 @@
         top: 21.8%
 
   .introPage
-    .pageTitle
-      flex-direction: row
-      top: 9%
-      left: 50%
-      transform: translateX(-50%)
-      gap: 16px
     .svgBackground
       .icon_email, .icon_search, .paper1, .icon_fileFront
         display: none
       .icon_fileBack
-        height: 60%
-        left: -15%
-      .icon_myPhoto
-        height: 40%
-        right: 3%
-        bottom: 37%
+        width: 115%
+        left: 50%
+        transform: translate(-50%, -50%) !important
     .letter
       width: 84%
-      bottom: 50%
-      left: 8%
-      transform: translateY(50%)
       padding: 8% 8% 12%
       gap: 12px
       li
@@ -1260,6 +1245,8 @@
             font-size: 26px
 
   .skillPage
+    .pageTitle
+      top: 11.5%
     .skillList
       top: 52%
       .skillItem
@@ -1359,4 +1346,58 @@
           margin-top: 12px
         ul li .skillLine .skill
           font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

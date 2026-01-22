@@ -10,8 +10,8 @@ export default {
         {
           title: '前端開發',
           skillItem: [
-            { year: 6, list: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'Git'] },
-            { year: 1, list: ['TypeScript'] }
+            { year: 6, list: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Vue.js', 'Git'] },
+            { year: 1, list: ['Axios', 'TypeScript'] }
           ]
         },
         {
@@ -57,9 +57,9 @@ export default {
           .close
       ul
         li(v-for='skill in item.skillItem')
-          .year
-            span.num {{ skill.year }}
-            span years
+          // .year
+          //   span.num {{ skill.year }}
+          //   span years
           .skillLine
             .skill(v-for='s in skill.list') {{ s }}
 </template>

@@ -1,4 +1,4 @@
-.introPage
+.theme2 .introPage
   width: 100%
   height: 100%
   position: relative
@@ -53,7 +53,7 @@
       right: 30vmin
       left: unset
     .icon_email
-      height: 16vmin
+      height: max(7.5vw, 150px)
       top: 15vmin
       left: 12vmin
       transform: rotate(15deg)
@@ -69,12 +69,12 @@
         animation: paperMove 3s 0s infinite ease-in-out both
         transform-origin: center
     .paper1
-      height: 30vmin
+      height: max(13.5vw, 250px)
       bottom: -10vmin
       left: 9vmin
       transform: translate(0, -7.6vw) rotate(-22deg)
     .paper2
-      height: 23vmin
+      height: max(8vw, 200px)
       top: 33vmin
       right: 21vmin
       left: unset
@@ -113,21 +113,21 @@
       animation: cloudLarge 6s 0s infinite ease-in-out
       filter: drop-shadow(6px 6px 0px var(--black))
     .icon_myPhoto
-      height: 76vmin
-      right: 38vmin
-      bottom: 15vmin
+      height: max(80vh, 600px)
+      right: max(18vw, 16px)
+      bottom: 10vh
       z-index: 3
       animation: myPhotoMoving 15s 0s infinite ease-in-out
       filter: drop-shadow(6px 6px 0px var(--black))
     .icon_fileBack
-      height: 70vmin
-      right: 82vmin
-      bottom: 16vmin
+      height: max(80vh, 600px)
+      right: max(38vw, 16px)
+      bottom: 10vh
       animation: screenMoving 15s 1s infinite ease-in-out
       filter: drop-shadow(6px 6px 0px var(--black))
     .icon_fileFront
       height: 24vmin
-      right: 63vmin
+      right: max(30vw, 16px)
       bottom: 12.5vh
       z-index: 4
       animation: screenMoving 15s 1s infinite ease-in-out
@@ -138,11 +138,12 @@
   .letter
     width: 81vmin
     max-width: 750px
+    min-height: 60vh
     display: inline-flex
     flex-direction: column
     position: absolute
-    right: 94.5vmin
-    bottom: 19.6vmin
+    right: max(45vw, 16px)
+    bottom: 15vh
     padding: 5vmin
     text-align: left
     border-radius: 12px
@@ -153,7 +154,7 @@
     li
       p
         margin: 0
-        font-size: 24px
+        font-size: 3vmin
         font-weight: 600
         color: var(--black)
         letter-spacing: 1px
@@ -174,13 +175,25 @@
             background-color: var(--pink)
             opacity: 0.6
         &.firstLine
-          font-size: 38px
+          font-size: 4.5vmin
           .point::after
             bottom: 10px
 
 // 進入畫面
-.swiper-slide-active
+.theme2 .swiper-slide-active
   .introPage
     .textBg
       .info
         animation: aboutFadeIn 2s 0s 1 ease-in-out
+
+
+
+
+
+
+
+
+
+
+
+
