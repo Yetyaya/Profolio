@@ -5,6 +5,18 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
+import img11 from '@/assets/theme1/section3/1-1.webp'
+import img13 from '@/assets/theme1/section3/1-3.webp'
+import img14 from '@/assets/theme1/section3/1-4.webp'
+import img21 from '@/assets/theme1/section3/2-1.webp'
+import img23 from '@/assets/theme1/section3/2-3.webp'
+import img24 from '@/assets/theme1/section3/2-4.webp'
+import img31 from '@/assets/theme1/section3/3-1.webp'
+import img32 from '@/assets/theme1/section3/3-2.webp'
+import img41 from '@/assets/theme1/section3/4-1.webp'
+import img42 from '@/assets/theme1/section3/4-2.webp'
+import img44 from '@/assets/theme1/section3/4-4.webp'
+
 export default {
   components: {
     Swiper,
@@ -46,11 +58,7 @@ export default {
           ],
           result: "醫護人員可在無額外教學的情況下使用功能，大幅提升工作效率，改善原本需耗時較多，步驟繁瑣的工作流程。",
           link: "https://aic.csh.org.tw/cshGPT/",
-          images: [
-            new URL('@/assets/theme1/section3/1-1.webp', import.meta.url).href,
-            new URL('@/assets/theme1/section3/1-3.webp', import.meta.url).href,
-            new URL('@/assets/theme1/section3/1-4.webp', import.meta.url).href
-          ]
+          images: [img11, img13, img14]
         },
         {
           title: "清腸辨識",
@@ -62,11 +70,7 @@ export default {
           ],
           result: "病患可自行拍攝照片上傳並獲得分析結果，醫護人員可遠端即時取得資料，成功取代人工查看流程，大幅提升作業效率。",
           link: "https://aic.csh.org.tw/poolens/verify",
-          images: [
-            new URL('@/assets/theme1/section3/2-1.webp', import.meta.url).href,
-            new URL('@/assets/theme1/section3/2-3.webp', import.meta.url).href,
-            new URL('@/assets/theme1/section3/2-4.webp', import.meta.url).href
-          ]
+          images: [img21, img23, img24]
         },
         {
           title: "臺灣熱傷害指數",
@@ -78,10 +82,7 @@ export default {
           ],
           result: "使用者能快速判斷各地熱傷害風險，提升資料可讀性與理解速度。",
           link: "https://yetyaya.github.io/WBGT-of-Taiwan/",
-          images: [
-            new URL('@/assets/theme1/section3/3-1.webp', import.meta.url).href,
-            new URL('@/assets/theme1/section3/3-2.webp', import.meta.url).href,
-          ]
+          images: [img31, img32]
         },
         {
           title: "芸蒔刻｜鮮果製茶園",
@@ -93,11 +94,7 @@ export default {
           ],
           result: "社會大眾能透過網站色系、風格感受品牌故事理念，店家最新資訊可即時更新查看。",
           link: "https://yetyaya.github.io/Rinskings/",
-          images: [
-            new URL('@/assets/theme1/section3/4-1.webp', import.meta.url).href,
-            new URL('@/assets/theme1/section3/4-2.webp', import.meta.url).href,
-            new URL('@/assets/theme1/section3/4-4.webp', import.meta.url).href,
-          ]
+          images: [img41, img42, img44]
         },
       ],
       skillArr: [
@@ -175,7 +172,7 @@ export default {
 </script>
 
 <template lang="pug">
-  section#about-block
+  section#about-block(aria-labelledby="about-title")
     .about-bg
       .bg-left
       .bg-right
@@ -184,7 +181,7 @@ export default {
         .about-txt
           .main-title
             h2 你好，
-            h2 我是翊婷
+            h2#about-title 我是翊婷
           .sub-title
             h3 A Frontend Engineer
           .description
@@ -192,13 +189,13 @@ export default {
             P 並將設計落實為穩定、可維護的系統
         .btn-group
           a.btn.sub-btn(href="https://drive.google.com/file/d/1205H9ry16_GAADsyWthdzyWj2R6b6Ytm/view?usp=sharing" target="_blank") 下載履歷
-      img.about-img(src="@/assets/theme1/section1/banner.webp" alt="alt")
+      img.about-img(src="@/assets/theme1/section1/banner.webp" alt="" aria-hidden="true")
 
-  section#solve-block.section-spacing
+  section#solve-block.section-spacing(aria-labelledby="solve-title")
     .container-70
       .section-title.section-title-bottom
         .en-title WHAT I SOLVE
-        .main-title 問題處理經驗
+        #solve-title.main-title 問題處理經驗
         .sub-title 在實際專案中處理過的問題類型
       .solve-content.d-flex
         .card.d-flex(v-for="(item, id) in solveArr" :key="id")
@@ -207,11 +204,11 @@ export default {
             .card-title {{ item.title }}
             .description {{ item.desc }}
 
-  section#project-block.section-spacing
+  section#project-block.section-spacing(aria-labelledby="project-title")
     .container-70
       .section-title.section-title-bottom
         .en-title Projects
-        .main-title 專案作品
+        #project-title.main-title 專案作品
         .sub-title 工作 / 案件 / 個人研究
       .project-content
         .card.d-grid.img-radius(v-for="(item, id) in projectArr" :key="id")
@@ -226,11 +223,14 @@ export default {
               :mousewheel="false"
               :autoplay="{ delay: 5000, disableOnInteraction: true }"
               :modules="modules"
+              :keyboard="{ enabled: true }"
+              role="region"
+              :aria-label="`${item.title} 專案圖片輪播`"
               @swiper="onSwiper"
               @slideChange="onSlideChange"
             )
               SwiperSlide(v-for="(image, imgId) in item.images" :key="imgId")
-                img(:src="image" :alt="`${item.title} - ${imgId + 1}`")
+                img(:src="image" :alt="`${item.title} 專案畫面，第 ${imgId + 1} 張`")
           .card-txt
             .card-header
               .card-id 
@@ -253,15 +253,15 @@ export default {
                 .item-title 最終成效
                 .item-txt {{ item.result }}
               .btn-group
-                a.btn(:href="item.link" target="_blank")
+                a.btn(:href="item.link" target="_blank" :aria-label="`前往 ${item.title} 專案網站`")
                   span 前往網站
                   .icon
 
-  section#skill-block.section-spacing
+  section#skill-block.section-spacing(aria-labelledby="skill-title")
     .container-65
       .section-title.section-title-bottom
         .en-title Technology Stack
-        .main-title 技術堆疊
+        #skill-title.main-title 技術堆疊
         .sub-title 工程能力與技術實作
       .skill-content
         .card.img-radius(v-for="(item, id) in skillArr" :key="id")
@@ -275,12 +275,12 @@ export default {
                 span {{ s.title }}
               .item-txt {{ s.desc }}
 
-  footer.section-spacing
+  footer.section-spacing(role="contentinfo")
     .container-80
       .footer-content.d-grid
         .contact-info.d-grid
           .my-photo
-            img(src="@/assets/theme1/footer/yi-ting.jpg" alt="alt")
+            img(src="@/assets/theme1/footer/yi-ting.jpg" alt="顏翊婷，前端工程師，個人形象照片")
           .section-title
             .en-title Contact Info
             .main-title 聯絡資訊

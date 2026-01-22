@@ -162,7 +162,7 @@ export default {
   methods: {
     handleScroll() {
       const scrollTop = window.scrollY || document.documentElement.scrollTop
-      this.isScrollingUp = scrollTop === 0
+      this.isScrollingUp = scrollTop < 50
     },
     onSwiper(swiper) {
       this.swiper = swiper
@@ -218,7 +218,7 @@ export default {
               .theme-toggle
                 template(v-for="num in 2")
                   button.theme-btn(:class="{ 'active': num === 1 }" @click="toggleThemeIfNeeded(num)")
-                    | {{ num === 1 ? '正式' : '輕快' }}
+                    | {{ num === 1 ? '杏黃' : '靛青' }}
         ThemeOne
 
     //- 主题2
@@ -231,7 +231,7 @@ export default {
           .theme-toggle
             template(v-for="num in 2")
               button.theme-btn(:class="{ 'active': num === 2 }" @click="toggleThemeIfNeeded(num)")
-                | {{ num === 1 ? '正式' : '輕快' }}
+                | {{ num === 1 ? '杏黃' : '靛青' }}
         .hamburger(:class="{ active: showHamburgerMenu }" @click="showHamburgerMenu = !showHamburgerMenu")
           .hamburgerBox
             .hamburgerInner
@@ -290,42 +290,6 @@ export default {
   align-items: center
   pointer-events: auto
   overflow: hidden
-
-.theme2
-  .theme-header
-    padding: 1.125rem 1.75rem 0 0
-
-  .theme-toggle
-    border: 2px solid var(--black)
-    border-radius: 4px
-    box-shadow: var(--box-shadow)
-
-  .theme-btn
-    padding: 0.5rem 1rem
-    background: transparent
-    color: inherit
-    cursor: pointer
-    font-size: 0.9rem
-    font-weight: 600
-    border-radius: 0
-    transition: all 0.3s ease
-    color: var(--black)
-    background: color-mix(in oklab, var(--blueDeep) 20%, white)
-    &:first-child
-      border-right: 2px solid var(--black)
-      &:hover
-        border-right-color: var(--black)
-
-    &:hover
-      background: color-mix(in oklab, var(--blueDeep) 40%, white)
-      border-color: transparent
-      outline: none
-
-    &.active
-      color: var(--white)
-      background: var(--blueDeep)
-      &:hover
-        background: color-mix(in oklab, var(--blueDeep) 75%, black)
 
 .theme1-container,
 .theme2-container

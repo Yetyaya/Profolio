@@ -133,9 +133,9 @@
     grid-template-areas: "section1-txt section1-img"
   .about-img
     width: 100%
-    height: fit-content
     position: relative
     transform: translateX(calc(var(--Space2) * 4.5))
+    aspect-ratio: 1450 / 1121
     grid-area: section1-img
   .about-msg
     height: 100%
@@ -178,7 +178,6 @@
   background-position: center
   background-repeat: no-repeat
   background-image: url("../assets/theme1/section2/bg.webp")
-  background-attachment: fixed
   .solve-content
     gap: var(--Space3)
     .card
@@ -244,7 +243,6 @@
   background-size: cover
   background-position: center
   background-repeat: no-repeat
-  background-attachment: fixed
   background-image: url("../assets/theme1/section3/bg.webp")
   &::before, &::after
     content: ""
@@ -373,7 +371,6 @@
 
 .theme1 section#skill-block
   position: relative
-  background-attachment: fixed
   background-size: cover
   background-position: center
   background-repeat: no-repeat
@@ -715,20 +712,25 @@
       order: 2
       justify-content: center
       margin-bottom: calc(var(--Space1) * 0.5)
-      font-size: calc(var(--FontSizePrimary) * 0.65)
+      h2
+        font-size: var(--FontSizePrimary)
     .sub-title
       order: 1
       margin-bottom: calc(var(--Space1) * 0.5)
       h3
-        font-size: calc(var(--FontSizePrimary) * 0.45)
+        font-size: var(--FontSizeTitleDeco)
     .description
       order: 3
+      p
+        font-size: var(--FontSizeSecondary)
+        font-weight: 500
     .about-img
       transform: translateX(calc(var(--Space2) * 1.25))
-      padding-top: max(11rem, 160px)
+      padding-top: max(13rem, 160px)
       grid-area: section1-txt
     .about-msg .btn-group
       transform: translateY(var(--Space2))
+      box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.25)
 
   .theme1 section#solve-block
     .container-70
@@ -780,7 +782,7 @@
       max-width: 100%
     .about-img
       transform: scale(1.25)
-      padding-top: max(12.5rem, 160px)
+      padding-top: max(15rem, 160px)
 
   .theme1 section#solve-block .container-70
     width: 75%
@@ -816,7 +818,10 @@
     width: 85%
   .theme1 section#solve-block .solve-content .card
     flex-direction: column
+    position: sticky
+    top: 100px
     padding-bottom: var(--Space2)
+    box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.25)
     .card-img
       width: 100%
       border-end-start-radius: 0
@@ -831,6 +836,7 @@
 
   .theme1 section#project-block .container-70
     width: 86%
+
 
 @media (max-width: 480px)
   .theme1 section#project-block .container-70
@@ -852,6 +858,10 @@
       transform: scale(1.375)
 
 @media (max-width: 380px)
+
+@media (hover: hover) and (pointer: fine)
+  .theme1 section#solve-block, .theme1 section#skill-block, .theme1 section#project-block
+    background-attachment: fixed
 
 
 

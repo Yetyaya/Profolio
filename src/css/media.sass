@@ -29,1375 +29,1322 @@
 //       .projectName
 //         .title
 //           font-size: 10vmin
+.theme2
+  @media (max-width: 1700px)
+    .homePage
+      .svgBackground
+        .icon_window4
+          top: 42.96vmin
+        .icon_sticker
+          top: 64.1vmin
 
-@media (max-width: 1700px)
-  .homePage
-    .svgBackground
-      .icon_window4
-        top: 42.96vmin
-      .icon_sticker
-        top: 64.1vmin
+    .introPage
+      .svgBackground
+        .icon_fileBack
+          left: max(12vw, 16px)
+        .icon_fileFront
+          right: max(25vw, 16px)
+        .icon_msg_star
+          top: 8vmin
+        // .icon_myPhoto
+        //   right: 5vw
+      .letter
+        left: max(15vw, 16px)
 
-  .introPage
-    .svgBackground
-      .icon_fileBack
-        left: max(12vw, 16px)
-      .icon_fileFront
-        right: max(25vw, 16px)
-      .icon_msg_star
-        top: 8vmin
-      // .icon_myPhoto
-      //   right: 5vw
-    .letter
-      left: max(15vw, 16px)
+  //   .homePage
+  //     .svgBackground
+  //       .icon_sun
+  //         right: 15vmin
 
-//   .homePage
-//     .svgBackground
-//       .icon_sun
-//         right: 15vmin
+  //   .introPage
+  //     .svgBackground
+  //       .paper1
+  //         left: 5vmin
+  //       .icon_myPhoto
+  //         right: 10vmin
+  //       .icon_fileBack
+  //         right: 52vmin
+  //       .icon_fileFront
+  //         right: 33vmin
+  //     .letter
+  //       right: 62.5vmin
 
-//   .introPage
-//     .svgBackground
-//       .paper1
-//         left: 5vmin
-//       .icon_myPhoto
-//         right: 10vmin
-//       .icon_fileBack
-//         right: 52vmin
-//       .icon_fileFront
-//         right: 33vmin
-//     .letter
-//       right: 62.5vmin
+  //   .skillPage
+  //     .mySelfImage
+  //       left: -12vmin
+  //     .svgBackground
+  //       .icon_rainbow2
+  //         left: 37vmin
+  //       .icon_internet
+  //         right: 8vmin
+  //       .cloud3
+  //         top: 13vmin
 
-//   .skillPage
-//     .mySelfImage
-//       left: -12vmin
-//     .svgBackground
-//       .icon_rainbow2
-//         left: 37vmin
-//       .icon_internet
-//         right: 8vmin
-//       .cloud3
-//         top: 13vmin
+  //   .projectPage
+  //     .info
+  //       .projectName
+  //         .year
+  //           font-size: 5.5vmin
+  //         .title
+  //           font-size: 9vmin
+  //       .projectDetail
+  //         .points li .point
+  //           .text
+  //             font-size: 2.2vmin
+  //             font-weight: 500
+  //         .tags li
+  //           font-size: 3.7vmin
 
-//   .projectPage
-//     .info
-//       .projectName
-//         .year
-//           font-size: 5.5vmin
-//         .title
-//           font-size: 9vmin
-//       .projectDetail
-//         .points li .point
-//           .text
-//             font-size: 2.2vmin
-//             font-weight: 500
-//         .tags li
-//           font-size: 3.7vmin
-
-@media (max-width: 1440px)
-  .homePage
-    h1
-      right: 12vmin
-    h2
-      right: 14vmin
-    .svgBackground
-      .icon_msg_heart
-        right: 45vmin
-
-  .introPage
-    .svgBackground
-      .icon_myPhoto
-        right: max(6vw, 16px)
-    .letter
-      padding-right: 6%
-
-  .skillPage
-    .mySelfImage
-      left: -22vmin
-    .svgBackground
-      .icon_rainbow2
-        left: 27vmin
-      .icon_circle
-        right: 37.24vmin
-      .cloud2
-        right: 22vmin
-      .cloud3
-        top: 15.5vmin
-        right: 3vmin
-
-  .projectPage
-    .bgText
-      display: block
-      position: absolute
-      bottom: -10vmin
-      z-index: -1
-      line-height: 1
-      font-size: 50vmin
-      font-family: "Poller One"
-      white-space: nowrap
-      color: var(--white)
-      text-transform: uppercase
-      opacity: 0.3
-    .bgImg
-      z-index: 0
-      clip-path: polygon(0% 0%, 0 13%, 100% 20%, 100% 82%, 0 87%, 0 100%, 100% 100%, 100% 0%)
-    .gotoWeb
-      display: none
-      &.mobile
-        display: block
-        animation-delay: 1.4s
-    .info
-      flex-direction: column
-      top: 49%
-      .projectName, .projectDetail
-        width: 100%
-      .projectName
-        align-items: center
-        gap: 0
-        .year
-          display: none
-        .title
-          display: none
-      .projectDetail
-        align-items: center
-        .topTitle
-          display: flex
-          margin-bottom: 1vmin
-          .classify
-            display: block
-            background-color: var(--yellow)
-        .classify
-          display: none
-        .points li .point
-          .text
-            font-size: 2.2vmin
-            font-weight: 500
-        .tags
-          justify-content: center
-          li
-            font-size: 3.7vmin
-
-  @keyframes switchLeftIn
-    0%
-      clip-path: polygon(0% 0%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%)
-    100%
-      clip-path: polygon(0% 0%, 0 13%, 100% 20%, 100% 82%, 0 87%, 0 100%, 100% 100%, 100% 0%)
-  @keyframes switchLeftOut
-    0%
-      clip-path: polygon(0% 0%, 0 13%, 100% 20%, 100% 82%, 0 87%, 0 100%, 100% 100%, 100% 0%)
-    100%
-      clip-path: polygon(0% 0%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%)
-
-@media (max-width: 1366px)
-  .homePage
-    h1
-      top: 69vmin
-      font-size: 20vmin
-    h2
-      top: 57.5vmin
-      font-size: 14vmin
-    .svgBackground
-      .icon_msg_heart
-        top: 54vmin
-        right: 36.5vmin
-      .icon_window3
-        left: 14.5vmin
-      .icon_rainbow
-        left: 14.2vmin
-      .icon_cloud_large
-        left: 9vmin
-      .icon_cloud_small
-        left: 12vmin
-      .icon_sun
-        top: 18vmin
-        right: 8vmin
-      .icon_sticker
-        left: 10vmin
-      .icon_range
-        left: 17vmin
-      .icon_window1
-        left: 28vmin
-      .icon_msg_hello
-        left: 72.5vmin
-
-  .introPage
-    .svgBackground
-      .icon_email, .icon_msg_star
-        display: none
-      .icon_fileBack
-        left: max(13vw, 16px)
-      .icon_myPhoto
-        height: 70vh
-        bottom: 15vh
-      .icon_fileFront
-        right: max(20vw, 16px)
-      .paper1
-        display: none
-    .letter
-      width: 47%
-      left: max(10.5vw, 16px)
-
-@media (max-width: 1250px)
-  .introPage
-    .letter
-      padding-right: 10%
-
-@media (max-width: 1200px)
-  .introPage
-    .svgBackground
-      .icon_email, .icon_msg_star
-        display: none
-      .icon_myPhoto
-        right: max(2vw, 16px)
-      .paper1
-        display: none
-      .icon_search
-        top: 14.5vmin
-    .letter
-      left: max(10.5vw, 16px)
-      padding-right: 5vmin
-
-@media (max-width: 1100px)
-  .homePage
-    h1
-      right: 8vmin
-    h2
-      right: 9vmin
-    .svgBackground
-      .icon_msg_heart
-        right: 31.5vmin
-      .icon_window3
-        left: 14.5vmin
-      .icon_rainbow
-        left: 14.2vmin
-      .icon_cloud_large
-        left: 9vmin
-      .icon_cloud_small
-        left: 12vmin
-      .icon_sun
-        top: 18vmin
-        right: 8vmin
-      .icon_sticker
-        left: 10vmin
-      .icon_range
-        left: 17vmin
-      .icon_window1
-        left: 28vmin
-      .icon_msg_hello
-        left: 72.5vmin
-
-  .pageTitle
-    font-size: 10vmin
-
-  .introPage
-    .svgBackground
-      .icon_pen
-        display: none
-      .icon_grid
-        right: 10vmin
-      .icon_search
+  @media (max-width: 1440px)
+    .homePage
+      h1
         right: 12vmin
-      .icon_myPhoto
-        height: 66vmin
-        right: 3vmin
-      .icon_fileBack
-        height: 73vmin
-        left: 15vmin
-      .icon_fileFront
-        height: 22vmin
-        right: 16vmin
-      .paper2
-        display: none
-    .letter
-      width: 50%
-      bottom: 8vh
-      left: 12vmin
-      padding: 5vmin 9vmin 5vmin 5vmin
+      h2
+        right: 14vmin
+      .svgBackground
+        .icon_msg_heart
+          right: 45vmin
 
-  .skillPage
-    .mySelfImage
-      display: none
-    .svgBackground
-      .icon_computer, .icon_internet
-        display: none
-      .icon_rainbow2
-        height: 135vmin
-        left: 8vmin
-      .icon_circle
-        top: 65.78vmin
-        right: 12.24vmin
-      .cloud1
-        top: 56vmin
-      .cloud2
-        top: 1.5vmin
-        right: unset
-        left: 7vmin
-      .cloud4
-        right: unset
-        left: -9vmin
-      .cloud5
-        top: 92.5vmin
-        right: -12vmin
-    .skillList
-      transform: translate(-50%, -50%)
-      .skillItem
-        &:last-child
-          transform: unset
-          margin: 40px 0 0 0
+    .introPage
+      .svgBackground
+        .icon_myPhoto
+          right: max(6vw, 16px)
+      .letter
+        padding-right: 6%
 
-  .projectPage
-    .gotoWeb.mobile
-      .gotoWebsite
-        height: 23.6vmin
-    .info
-      top: 50%
-      .projectDetail
-        .points
-          width: 81%
-          margin-bottom: 4vmin
-        .tags
-          width: 60%
-          justify-content: start
-          margin-left: -11%
+    .skillPage
+      .mySelfImage
+        left: -22vmin
+      .svgBackground
+        .icon_rainbow2
+          left: 27vmin
+        .icon_circle
+          right: 37.24vmin
+        .cloud2
+          right: 22vmin
+        .cloud3
+          top: 15.5vmin
+          right: 3vmin
 
-@media (max-width: 1024px)
-  .homePage
-    h1
-      top: unset
-      bottom: 15vmin
-    h2
-      top: unset
-      bottom: 34.5vmin
-    .svgBackground
-      .icon_msg_heart
-        top: unset
-        bottom: 48.5vmin
-      .icon_window4
-        display: none
-      .icon_cloud_large
-        top: 30vmin
-      .icon_cloud_small
-        top: 36.5vmin
-      .icon_sticker
-        top: 58.1vmin
-        left: 7.5vmin
-      .icon_range
-        top: 56.15vmin
-        left: 10vmin
-      .icon_msg_hello
-        top: 26vmin
-        left: 58.5vmin
-      .icon_window3
-        top: 21.28vmin
-        left: 8.5vmin
-      .icon_rainbow
-        top: 11vmin
-        left: 10.2vmin
-      .icon_window1
-        top: 35.61vmin
-        left: 14vmin
-      .icon_grid
-        right: 19.13vmin
-
-  .introPage
-    .textBg
-      transform: scale(1.75)
-    .svgBackground
-      .paper1
-        height: max(13.5vw, 150px)
+    .projectPage
+      .bgText
         display: block
-        left: 2vmin
-      .icon_search
-        top: 17vmin
-      .icon_grid
-        top: 24vmin
-      .icon_fileBack
-        width: 80%
-        height: unset
-        top: 48%
+        position: absolute
+        bottom: -10vmin
+        z-index: -1
+        line-height: 1
+        font-size: 50vmin
+        font-family: "Poller One"
+        white-space: nowrap
+        color: var(--white)
+        text-transform: uppercase
+        opacity: 0.3
+      .bgImg
+        z-index: 0
+        clip-path: polygon(0% 0%, 0 13%, 100% 20%, 100% 82%, 0 87%, 0 100%, 100% 100%, 100% 0%)
+      .gotoWeb
+        display: none
+        &.mobile
+          display: block
+          animation-delay: 1.4s
+      .info
+        flex-direction: column
+        top: 49%
+        .projectName, .projectDetail
+          width: 100%
+        .projectName
+          align-items: center
+          gap: 0
+          .year
+            display: none
+          .title
+            display: none
+        .projectDetail
+          align-items: center
+          .topTitle
+            display: flex
+            margin-bottom: 1vmin
+            .classify
+              display: block
+              background-color: var(--yellow)
+          .classify
+            display: none
+          .points li .point
+            .text
+              font-size: 2.2vmin
+              font-weight: 500
+          .tags
+            justify-content: center
+            li
+              font-size: 3.7vmin
+
+    @keyframes switchLeftIn
+      0%
+        clip-path: polygon(0% 0%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%)
+      100%
+        clip-path: polygon(0% 0%, 0 13%, 100% 20%, 100% 82%, 0 87%, 0 100%, 100% 100%, 100% 0%)
+    @keyframes switchLeftOut
+      0%
+        clip-path: polygon(0% 0%, 0 13%, 100% 20%, 100% 82%, 0 87%, 0 100%, 100% 100%, 100% 0%)
+      100%
+        clip-path: polygon(0% 0%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%)
+
+  @media (max-width: 1366px)
+    .homePage
+      h1
+        top: 69vmin
+        font-size: 20vmin
+      h2
+        top: 57.5vmin
+        font-size: 14vmin
+      .svgBackground
+        .icon_msg_heart
+          top: 54vmin
+          right: 36.5vmin
+        .icon_window3
+          left: 14.5vmin
+        .icon_rainbow
+          left: 14.2vmin
+        .icon_cloud_large
+          left: 9vmin
+        .icon_cloud_small
+          left: 12vmin
+        .icon_sun
+          top: 18vmin
+          right: 8vmin
+        .icon_sticker
+          left: 10vmin
+        .icon_range
+          left: 17vmin
+        .icon_window1
+          left: 28vmin
+        .icon_msg_hello
+          left: 72.5vmin
+
+    .introPage
+      .svgBackground
+        .icon_email, .icon_msg_star
+          display: none
+        .icon_fileBack
+          left: max(13vw, 16px)
+        .icon_myPhoto
+          height: 70vh
+          bottom: 15vh
+        .icon_fileFront
+          right: max(20vw, 16px)
+        .paper1
+          display: none
+      .letter
+        width: 47%
+        left: max(10.5vw, 16px)
+
+  @media (max-width: 1250px)
+    .introPage
+      .letter
+        padding-right: 10%
+
+  @media (max-width: 1200px)
+    .introPage
+      .svgBackground
+        .icon_email, .icon_msg_star
+          display: none
+        .icon_myPhoto
+          right: max(2vw, 16px)
+        .paper1
+          display: none
+        .icon_search
+          top: 14.5vmin
+      .letter
+        left: max(10.5vw, 16px)
+        padding-right: 5vmin
+
+  @media (max-width: 1100px)
+    .homePage
+      h1
+        right: 8vmin
+      h2
+        right: 9vmin
+      .svgBackground
+        .icon_msg_heart
+          right: 31.5vmin
+        .icon_window3
+          left: 14.5vmin
+        .icon_rainbow
+          left: 14.2vmin
+        .icon_cloud_large
+          left: 9vmin
+        .icon_cloud_small
+          left: 12vmin
+        .icon_sun
+          top: 18vmin
+          right: 8vmin
+        .icon_sticker
+          left: 10vmin
+        .icon_range
+          left: 17vmin
+        .icon_window1
+          left: 28vmin
+        .icon_msg_hello
+          left: 72.5vmin
+
+    .pageTitle
+      font-size: 10vmin
+
+    .introPage
+      .svgBackground
+        .icon_pen
+          display: none
+        .icon_grid
+          right: 10vmin
+        .icon_search
+          right: 12vmin
+        .icon_myPhoto
+          height: 66vmin
+          right: 3vmin
+        .icon_fileBack
+          height: 73vmin
+          left: 15vmin
+        .icon_fileFront
+          height: 22vmin
+          right: 16vmin
+        .paper2
+          display: none
+      .letter
+        width: 50%
+        bottom: 8vh
+        left: 12vmin
+        padding: 5vmin 9vmin 5vmin 5vmin
+
+    .skillPage
+      .mySelfImage
+        display: none
+      .svgBackground
+        .icon_computer, .icon_internet
+          display: none
+        .icon_rainbow2
+          height: 135vmin
+          left: 8vmin
+        .icon_circle
+          top: 65.78vmin
+          right: 12.24vmin
+        .cloud1
+          top: 56vmin
+        .cloud2
+          top: 1.5vmin
+          right: unset
+          left: 7vmin
+        .cloud4
+          right: unset
+          left: -9vmin
+        .cloud5
+          top: 92.5vmin
+          right: -12vmin
+      .skillList
+        transform: translate(-50%, -50%)
+        .skillItem
+          &:last-child
+            transform: unset
+            margin: 40px 0 0 0
+
+    .projectPage
+      .gotoWeb.mobile
+        .gotoWebsite
+          height: 23.6vmin
+      .info
+        top: 50%
+        .projectDetail
+          .points
+            width: 81%
+            margin-bottom: 4vmin
+          .tags
+            width: 60%
+            justify-content: start
+            margin-left: -11%
+
+  @media (max-width: 1024px)
+    .homePage
+      h1
+        top: unset
+        bottom: 15vmin
+      h2
+        top: unset
+        bottom: 34.5vmin
+      .svgBackground
+        .icon_msg_heart
+          top: unset
+          bottom: 48.5vmin
+        .icon_window4
+          display: none
+        .icon_cloud_large
+          top: 30vmin
+        .icon_cloud_small
+          top: 36.5vmin
+        .icon_sticker
+          top: 58.1vmin
+          left: 7.5vmin
+        .icon_range
+          top: 56.15vmin
+          left: 10vmin
+        .icon_msg_hello
+          top: 26vmin
+          left: 58.5vmin
+        .icon_window3
+          top: 21.28vmin
+          left: 8.5vmin
+        .icon_rainbow
+          top: 11vmin
+          left: 10.2vmin
+        .icon_window1
+          top: 35.61vmin
+          left: 14vmin
+        .icon_grid
+          right: 19.13vmin
+
+    .introPage
+      .textBg
+        transform: scale(1.75)
+      .svgBackground
+        .paper1
+          height: max(13.5vw, 150px)
+          display: block
+          left: 2vmin
+        .icon_search
+          top: 17vmin
+        .icon_grid
+          top: 24vmin
+        .icon_fileBack
+          width: 80%
+          height: unset
+          top: 48%
+          right: 0
+          left: 0
+          transform: translateY(-50%) !important
+          margin-inline: auto
+        .icon_myPhoto
+          height: 56vmin
+          display: none
+          top: 50%
+          right: 11vmin
+          transform: translateY(-100%) !important
+        .icon_fileFront
+          display: none
+      .letter
+        width: 68%
+        max-width: unset
+        min-height: fit-content
+        top: 54%
         right: 0
         left: 0
-        transform: translateY(-50%) !important
+        transform: translateY(-50%)
+        padding: 5vmin 5vmin 10vmin 5vmin
         margin-inline: auto
-      .icon_myPhoto
-        height: 56vmin
-        display: none
-        top: 50%
-        right: 11vmin
-        transform: translateY(-100%) !important
-      .icon_fileFront
-        display: none
-    .letter
-      width: 68%
-      max-width: unset
-      min-height: fit-content
-      top: 54%
-      right: 0
-      left: 0
-      transform: translateY(-50%)
-      padding: 5vmin 5vmin 10vmin 5vmin
-      margin-inline: auto
-  
-  .skillPage
-    .svgBackground
-      .icon_rainbow2
-        height: 110vh
-      .icon_circle
-        top: unset
-        bottom: 9vmin
+    
+    .skillPage
+      .svgBackground
+        .icon_rainbow2
+          height: 110vh
+        .icon_circle
+          top: unset
+          bottom: 9vmin
 
-@media (max-width: 912px)
-  .homePage
-    h1
-      bottom: 6vmin
-    h2
-      bottom: 26vmin
-    .svgBackground
-      .icon_msg_heart
-        bottom: 40vmin
-
-  .pageTitle
-    font-size: 13vmin
-
-  .skillPage
-    .svgBackground
-      .cloud4, .cloud5
-        display: none
-      .icon_circle
-        right: 11.24vmin
-        bottom: 9vmin
-
-  .projectPage
-    .bgText
-      bottom: -6vmin
-    .gotoWeb.mobile
-      right: 8vmin
-      bottom: 7vmin
-      .gotoWebsite
-        height: 26.6vmin
-    .info
-      top: 45%
-      .projectDetail
-        .topTitle
-          .workTime
-            span
-              font-size: 2.7vmin
-        .name
-          font-size: 4.3vmin
-        .points
-          margin-bottom: 2vmin
-          li
-            .point
-              .title
-                font-size: 2.6vmin
-              .text
-                font-size: 2.4vmin
-        .tags
-          display: none
-    .tags.mobile
-      display: flex
-
-  .skillPage
-    .skillList
-      .skillItem
-        ul
-          li
-            .year
-              flex-direction: column
-              align-items: center
-              span
-                transform: translateY(11px)
-                line-height: 1
-                opacity: 0.3
-              .num
-                transform: translateY(13px)
-                margin-right: 15px
-                opacity: 1
-
-@media (max-width: 820px)
-  .homePage
-    .svgBackground
-      .icon_sticker, .icon_range
-        display: none
-      .shine1
-        top: 6.6vmin
-        left: 4.04vmin
-      .shine2
-        top: 2.5vmin
-        left: 13vmin
-      .shine3
-        top: unset
-        bottom: 23.5vmin
-        left: 29.3vmin
-      .shine4
-        top: unset
-        bottom: 25vmin
-        left: 23.3vmin
-      .icon_sun
-        top: 19vmin
-      .icon_window1
-        height: 67vmin
-        top: 30vmin
-        left: 4vmin
-      .icon_window3
-        height: 27vmin
-        left: 10vmin
-      .icon_rainbow
-        left: 13vmin
-
-  .skillPage
-    .pageTitle
-      flex-direction: row
-      top: 15vmin
-      right: unset
-      bottom: unset
-      left: 50%
-      transform: translateX(-50%)
-      font-size: 15vmin
-      gap: 16px
-    .svgBackground
-      .icon_rainbow2
-        left: 10vmin
-    .skillList
-      top: 54%
-      .skillItem
-        .title
-          font-size: 2.7vmin
-          font-weight: 400
-        ul
-          padding: 6px 4vmin 16px
-          li
-            .skillLine
-              .skill
-                font-size: 2.7vmin
-
-  .projectPage
-    .bgImg
-      &.poolens
-        background-size: auto 280%
-        background-position: 48% 43%
-      &.cshGPT
-        background-size: auto 180%
-        background-position: 80% 72%
-      &.wbgt
-        background-size: auto 180%
-        background-position: 30% 50%
-    .info
-      .projectDetail
-        .topTitle
-          margin-bottom: 2vmin
-          .workTime
-            span
-              font-size: 2.9vmin
-          .classify
-            font-size: 3.2vmin
-        .name
-          font-size: 4.5vmin
-        .points
-          li
-            .icon
-              width: 4.2vmin
-              height: 4.2vmin
-            .point
-              .title
-                font-size: 3vmin
-              .text
-                font-size: 2.9vmin
-    .tags
-      li
+  @media (max-width: 912px)
+    .homePage
+      h1
         bottom: 6vmin
-        font-size: 4.5vmin
+      h2
+        bottom: 26vmin
+      .svgBackground
+        .icon_msg_heart
+          bottom: 40vmin
 
-@media (max-width: 720px)
-  .homePage
-    h1
-      bottom: 18vmin
-    h2
-      bottom: 38vmin
-    .svgBackground
-      .icon_msg_heart
-        bottom: 52vmin
-      .shine3
-        bottom: 9.5vmin
-        left: 33.3vmin
-      .shine4
-        bottom: 10vmin
-        left: 26.3vmin
-
-  .skillPage
-    .skillList
-      .skillItem
-        .title
-          font-size: 3vmin
-        ul li .year
-          span
-            font-size: 3vmin
-          .num
-            font-size: 8vmin
-
-  .projectPage
-    .gotoWeb.mobile
-      .gotoWebsite
-        height: 33vmin
-    .info
-      .projectDetail
-        .topTitle
-          margin-bottom: 2vmin
-          .workTime
-            span
-              font-size: 3vmin
-          .classify
-            font-size: 3.5vmin
-        .name
-          margin-bottom: 2vmin
-          font-size: 5vmin
-        .points
-          width: 87%
-          li
-            .icon
-              width: 4.5vmin
-              height: 4.5vmin
-            .point
-              .title
-                font-size: 3.4vmin
-              .text
-                font-size: 3.2vmin
-    .tags
-      li
-        bottom: 8vmin
-        font-size: 4.6vmin
-
-@media (max-width: 560px)
-  .swiper-pagination
-    display: none
-
-  .brandGroup
-    flex-direction: row
-    top: 40px
-    right: unset
-    left: 30px
-
-  .homePage
-    .svgBackground
-      .shine1
-        left: 14.04vmin
-      .shine2
-        top: 10.5vmin
-        left: 23vmin
-      .shine6
-        top: 14.5vmin
-        right: 13vmin
-      .icon_window1
-        top: 38vmin
-      .icon_grid
-        top: 20.06vmin
-        right: 7.13vmin
-      .icon_window3
-        top: 27.28vmin
-      .icon_rainbow
-        top: 17vmin
-      .icon_cloud_large
-        top: 35vmin
-      .icon_cloud_small
-        top: 36.5vmin
-        left: 19.35vmin
-      .icon_msg_hello
-        top: 28vmin
-
-  .introPage
-    .textBg
-      transform: scale(3) translateY(3%)
     .pageTitle
-      width: fit-content
-      flex-direction: row
-      top: 12%
-      left: 50%
-      transform: translateX(-50%)
-      font-size: 14vmin
-      gap: 16px
-    .letter
-      // padding: 5.5vmin 7vmin 9vmin
-      li
-        p
-          font-size: 3vmin
-          &.firstLine
-            font-size: 4.5vmin
-    .pageTitle
-      font-size: 17vmin
+      font-size: 13vmin
 
-  .skillPage
-    .pageTitle
-      top: 18vmin
-      font-size: 17vmin
-    .skillList
-      .skillItem
-        .title
-          font-size: 4vmin
-        ul li
-          .year
-            span
-              font-size: 4vmin
-          .skillLine .skill
-            padding: 0.7vmin 2.5vmin
-            font-size: 3vmin
+    .skillPage
+      .svgBackground
+        .cloud4, .cloud5
+          display: none
+        .icon_circle
+          right: 11.24vmin
+          bottom: 9vmin
 
-  .projectPage .info
-    top: 40%
-    padding-inline: 2rem
-
-  .projectPage .tags.mobile
-    bottom: 7rem
-    left: 3rem
-
-  .projectPage .gotoWeb.mobile
-    right: 1.5rem
-
-  .projectPage .info .projectDetail
-    .points
-      width: 100%
-    .name
-      font-size: 6vmin
-    .classify
-      margin-bottom: 0
-      font-size: 3vmin
-      padding-block: 2px
-
-  .projectPage .info .projectDetail .topTitle
-    margin-bottom: 8px
-
-// iPad
-@media (max-width: 1024px) and (min-height: 768px) and (max-height: 769px)
-  .homePage
-    h1
-      bottom: 7%
-    h2
-      bottom: 26.5%
-    .svgBackground
-      .icon_msg_heart
-        bottom: 41.5%
-      .icon_range
-        top: 45.15%
-      .icon_sun
-        right: 18%
-      .icon_window1
-        top: 23%
-      .icon_window3
-        top: 15.28%
-      .icon_rainbow
-        top: 5%
-      .icon_cloud_large
-        top: 23%
-      .icon_cloud_small
-        top: 29.5%
-      .icon_msg_hello
-        top: 13%
-
-  .introPage
-    .svgBackground
-      .icon_search
-        top: 14vmin
-        right: 20vmin
-        left: unset
-      .icon_fileBack
-        height: 73vmin
-      .icon_myPhoto
-        height: 66vmin
-        display: block
-        transform: translateY(-50%) !important
-      .icon_fileFront
-        height: 20vmin
-        display: block
-        right: 22.5%
-        bottom: 15.5%
-    .letter
-      width: 50%
-      top: 54%
-      left: 12vmin
-      z-index: 0
-      padding: 5vmin 9vmin 5vmin 5vmin
-      margin-inline: unset
-
-  .skillPage
-    .svgBackground
-      .icon_rainbow2
-        height: 115vh
-    .skillList
-      .skillItem
-        &:last-child
-          margin-top: 20px
-        .title
-          font-size: 3vmin
-        ul li .skillLine .skill
-          font-size: 2.8vmin
-
-// Surface Pro
-@media (max-width: 912px) and (max-height: 1368px) and (min-height: 920px)
-  .brandGroup
-    a
-      width: 6vw
-      height: 6vw
-      font-size: 4vw
-      &.fa-paperclip
-        font-size: 3.5vw
-
-  .homePage
-    h1
-      bottom: 15%
-    h2
-      bottom: 29%
-    .svgBackground
-      .icon_msg_heart
-        bottom: 36%
-      .icon_sticker
-        top: 46%
-        left: 1%
-      .icon_range
-        height: 50%
-        top: 49%
-        left: -4%
-      .icon_sun
-        top: 13%
-        right: 50%
-      .icon_window1
-        height: 43%
-        top: 26%
-        left: 5%
-      .icon_window3
-        height: 20%
-        top: 18%
-        left: 12%
-      .icon_rainbow
-        height: 20%
-        top: 10.7%
-        left: 9.2%
-      .icon_cloud_large
-        top: 26%
-        left: 5%
-      .icon_cloud_small
-        top: 15.5%
-        left: 20%
-      .icon_msg_hello
-        top: 19%
-
-  .introPage
-    .textBg
-      transform: scale(2.5)
-    .svgBackground
-      .icon_search
-        top: 13%
-        right: 10%
-      .icon_fileBack
-        width: 84%
-        left: 50%
-        transform: translate(-50%, -50%) !important
-      .paper1
-        display: none
-      .icon_fileFront
-        right: 20%
-        bottom: 20%
-    .letter
-      width: 90%
-      top: 50%
-      padding: 6vmin 6vmin 10vmin 6vmin
-
-  .projectPage
-    .gotoWeb.mobile
-      .gotoWebsite
-        height: 34.6vmin
-    .tags.mobile
-      bottom: 20%
-    .info
-      .projectDetail
-        .topTitle
-          .workTime
-            span
-              font-size: 3.5vmin
-          .classify
-            font-size: 4.5vmin
-        .name
-          font-size: 5.5vmin
-        .points li .point
-          .title
-            font-size: 3.5vmin
-          .text
-            font-size: 3.2vmin
-
-// Surface Duo
-@media (max-width: 720px) and (max-height: 540px)
-  .homePage
-    h1
-      bottom: 5%
-    h2
-      bottom: 24.5%
-    .svgBackground
-      .icon_msg_heart
-        height: 8%
-        right: 24.5%
-        bottom: 40%
-      .icon_sun
-        height: 13%
-        top: 9%
-        right: 12%
-      .icon_window1
-        height: 65%
-        top: 18.61%
-        left: 15%
-      .icon_window3
-        height: 29%
-        top: 11%
-        left: 7.5%
-      .icon_rainbow
-        height: 29%
-        top: 0.45%
-        left: 9.2%
-      .icon_cloud_large
-        height: 14%
-        top: 20%
-        left: 4%
-      .icon_cloud_small
-        height: 8%
-        top: 6.5%
-        left: 16.5%
-      .icon_msg_hello
-        top: 8%
-        left: 59%
-
-  .introPage
-    .pageTitle
-      top: unset
-      right: 8%
-      bottom: 5%
-      left: unset
-    .svgBackground
-      .paper1
-        bottom: -11%
-        left: 0
-      .icon_email
-        top: 7%
-      .icon_search
-        top: 13.5%
-      .icon_fileBack
-      .icon_myPhoto
-        right: 5%
-        bottom: 17%
-        z-index: 1
-      .icon_fileFront
-        right: 24%
-        bottom: 8.8%
-    .letter
-      padding: 5.5% 15% 5.5% 7%
-
-  .skillPage
-    .pageTitle
-      flex-direction: column
-      top: unset
-      right: 8%
-      bottom: 5%
-      left: unset
-      transform: unset
-    .svgBackground
-      .icon_rainbow2
-        height: 115vh
-    .skillList
-      left: 45%
-      .skillItem
-        &:last-child
-          margin-top: 18px
-        ul
-          min-width: 80vmin
-          max-width: 80vmin
-          padding: 1% 3% 3%
-          li
-            .skillLine
-              gap: 6px
-              .skill
-                padding: 0.5% 2%
-
-  .projectPage
-    .gotoWeb.mobile
-      right: 2%
-      bottom: 2%
-      .gotoWebsite
-        height: 31.6vmin
-    .tags.mobile
-      bottom: 5%
-      left: 17%
-    .info
-      top: 43%
-      .projectDetail
-        .topTitle
-          margin-bottom: 3px
-          .workTime
-            span
-              font-size: 3vmin
-          .classify
-            padding: 3px 12px
-            font-size: 3.3vmin
-        .name
-          margin-bottom: 7px
-          font-size: 4.4vmin
-        .points
-          gap: 12px
-          li
-            .point
-              .title
-                font-size: 3vmin
-              .text
-                font-size: 3vmin
-    .tags li::after
-      box-shadow: none
-
-// Surface Duo
-@media (max-width: 540px) and (max-height: 720px)
-  .homePage
-    h1
-      bottom: 14%
-    .svgBackground
-      .icon_msg_heart
-        // height: 8%
-        right: 24.5%
-        bottom: 40%
-      .icon_sun
-        height: 13%
-        top: 9%
-        right: 12%
-      .icon_window1
-        height: 50%
-        top: 25%
-        left: 3%
-      .icon_window3
-        height: 29%
-        top: 15%
-        left: 7.5%
-      .icon_rainbow
-        height: 29%
-        top: 4.45%
-        left: 9.2%
-      .icon_cloud_large
-        height: 12%
-        top: 24%
-        left: -3%
-      .icon_cloud_small
-        height: 8%
-        top: 9.57%
-        left: 21.5%
-      .icon_msg_hello
-        top: 27%
-        left: 65%
-
-  .introPage
-    .pageTitle
-      width: fit-content
-      flex-direction: row
-      top: 12%
-      left: 50%
-      transform: translateX(-50%)
-      font-size: 14vmin
-      gap: 16px
-    .svgBackground
-      .paper1, .icon_search
-        display: none
-      .icon_fileBack
-        width: 125%
-        top: 52%
-        left: 50%
-        transform: translate(-50%, -50%) !important
-      .icon_myPhoto
-        display: none
-    .letter
-      width: 84%
-      top: 56%
-
-  .skillPage
-    .pageTitle
-      top: 12%
-      font-size: 14vmin
-    .skillList
-      top: 55%
-      .skillItem
-        &:last-child
-          margin-top: 3%
-        ul
-          min-width: 82vmin
-          max-width: 82vmin
-          padding: 2% 3% 3% 7%
-          li
-            .skillLine
-              gap: 6px
-
-  .projectPage
-    .gotoWeb.mobile
-      .gotoWebsite
-        height: 31.6vmin
-    .info
-      top: 42.5%
-      .projectDetail
-        .topTitle
-          margin-bottom: 3px
-          .workTime
-            span
-              font-size: 3vmin
-          .classify
-            padding: 3px 12px
-            font-size: 3.3vmin
-        .name
-          margin-bottom: 7px
-          font-size: 4.4vmin
-        .points
-          gap: 12px
-          li
-            .point
-              .title
-                font-size: 3vmin
-              .text
-                font-size: 3vmin
-
-@media (max-width: 440px)
-  \:root
-    --swiper-pagination-left: 5vw
-    --swiper-pagination-bullet-width: 5vw
-    --swiper-pagination-bullet-size: 5vw
-  .brandGroup
-    right: 5vw
-    a
-      width: 8vw
-      height: 8vw
-      font-size: 6vw
-      &.fa-paperclip
-        font-size: 5vw
-  .hamburger
-    display: none
-
-  .homePage
-    h1
-      right: 6%
-      bottom: 15%
-    h2
-      bottom: 26%
-      font-size: 17vmin
-    .svgBackground
-      .icon_msg_heart
-        display: none
-      .shine1, .shine2, .shine3, .shine4, .shine5, .shine6
-        height: 6%
-      .shine1
-        top: 6%
-      .shine2
-        top: 9.5%
-      .shine3
-        bottom: 5%
-        left: 40%
-      .shine4
-        bottom: 7%
-        left: 25%
-      .shine5
-        top: 8.11%
-        right: 7%
-      .shine6
-        top: 12%
-        right: 20%
-      .icon_sun
-        display: none
-      .icon_window1
-        height: 48%
-        top: 28%
-        left: -10%
-      .icon_grid
-        height: 46%
-        top: 18%
-      .icon_window3
-        height: 22%
-        top: 19.28%
-        left: -16%
-      .icon_rainbow
-        height: 25%
-        top: 10.8%
-        left: -8%
-      .icon_cloud_large
-        height: 11%
-        top: 27.5%
-        left: -13%
-      .icon_cloud_small
-        height: 7%
-        top: 15.5%
-        left: 6%
-      .icon_msg_hello
-        height: 8.5%
-        top: 21.8%
-
-  .introPage
-    .svgBackground
-      .icon_email, .icon_search, .paper1, .icon_fileFront
-        display: none
-      .icon_fileBack
-        width: 115%
-        left: 50%
-        transform: translate(-50%, -50%) !important
-    .letter
-      width: 84%
-      padding: 8% 8% 12%
-      gap: 12px
-      li
-        p
-          font-size: 16px
-          &.firstLine
-            font-size: 26px
-
-  .skillPage
-    .pageTitle
-      top: 11.5%
-    .skillList
-      top: 52%
-      .skillItem
-        &:last-child
-          margin-top: 20px
-        .title
-          margin-bottom: 5px
-          font-size: 16px
-          .icon
-            padding-right: 10px
-            gap: 9px
-            .minimize
-              &::before
-                width: 13px
-                border-width: 2px
-            .zoom
-              &::before, &::after
-                width: 8px
-                height: 8px
-                border-width: 2px
-            .close
-              &::before, &::after
-                width: 17px
-                border-width: 2px
-        ul
-          li
-            padding-top: 3px
-            &:not(:last-child)
-              padding-top: 0
-              padding-bottom: 7px
-            .year
-              .num
-                transform: translateY(11px)
-                margin-right: 5px
-            .skillLine
-              gap: 7px
-              .skill
-                font-size: 16px
-                border: 2px solid var(--black)
-
-  .projectPage
-    .info
-      top: 40%
-      .projectDetail
-        .topTitle
-          margin-bottom: 8px
-          hr
+    .projectPage
+      .bgText
+        bottom: -6vmin
+      .gotoWeb.mobile
+        right: 8vmin
+        bottom: 7vmin
+        .gotoWebsite
+          height: 26.6vmin
+      .info
+        top: 45%
+        .projectDetail
+          .topTitle
+            .workTime
+              span
+                font-size: 2.7vmin
+          .name
+            font-size: 4.3vmin
+          .points
+            margin-bottom: 2vmin
+            li
+              .point
+                .title
+                  font-size: 2.6vmin
+                .text
+                  font-size: 2.4vmin
+          .tags
             display: none
-          .classify
-            font-size: 13px
-            word-break: keep-all
-        .name::after
-          -webkit-text-stroke-width: 4px
-          -moz-text-stroke-width: 4px
-        .points
-          li
-            .point
-              .title
-                font-size: 13px
-                &::after
-                  -webkit-text-stroke-width: 3px
-                  -moz-text-stroke-width: 3px
-              .text
-                font-size: 13px
+      .tags.mobile
+        display: flex
 
-@media (max-width: 380px)
-  .homePage
-    h1
-      bottom: 14%
+    .skillPage
+      .skillList
+        .skillItem
+          ul
+            li
+              .year
+                flex-direction: column
+                align-items: center
+                span
+                  transform: translateY(11px)
+                  line-height: 1
+                  opacity: 0.3
+                .num
+                  transform: translateY(13px)
+                  margin-right: 15px
+                  opacity: 1
 
-  .introPage
-    .svgBackground
-      .icon_fileBack
+  @media (max-width: 820px)
+    .homePage
+      .svgBackground
+        .icon_sticker, .icon_range
+          display: none
+        .shine1
+          top: 6.6vmin
+          left: 4.04vmin
+        .shine2
+          top: 2.5vmin
+          left: 13vmin
+        .shine3
+          top: unset
+          bottom: 23.5vmin
+          left: 29.3vmin
+        .shine4
+          top: unset
+          bottom: 25vmin
+          left: 23.3vmin
+        .icon_sun
+          top: 19vmin
+        .icon_window1
+          height: 67vmin
+          top: 30vmin
+          left: 4vmin
+        .icon_window3
+          height: 27vmin
+          left: 10vmin
+        .icon_rainbow
+          left: 13vmin
+
+    .skillPage
+      .pageTitle
+        flex-direction: row
+        top: 15vmin
+        right: unset
+        bottom: unset
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 15vmin
+        gap: 16px
+      .svgBackground
+        .icon_rainbow2
+          left: 10vmin
+      .skillList
+        top: 54%
+        .skillItem
+          .title
+            font-size: 2.7vmin
+            font-weight: 400
+          ul
+            padding: 6px 4vmin 16px
+            li
+              .skillLine
+                .skill
+                  font-size: 2.7vmin
+
+    .projectPage
+      .bgImg
+        &.poolens
+          background-size: auto 280%
+          background-position: 48% 43%
+        &.cshGPT
+          background-size: auto 180%
+          background-position: 80% 72%
+        &.wbgt
+          background-size: auto 180%
+          background-position: 30% 50%
+      .info
+        .projectDetail
+          .topTitle
+            margin-bottom: 2vmin
+            .workTime
+              span
+                font-size: 2.9vmin
+            .classify
+              font-size: 3.2vmin
+          .name
+            font-size: 4.5vmin
+          .points
+            li
+              .icon
+                width: 4.2vmin
+                height: 4.2vmin
+              .point
+                .title
+                  font-size: 3vmin
+                .text
+                  font-size: 2.9vmin
+      .tags
+        li
+          bottom: 6vmin
+          font-size: 4.5vmin
+
+  @media (max-width: 720px)
+    .homePage
+      h1
+        bottom: 18vmin
+      h2
+        bottom: 38vmin
+      .svgBackground
+        .icon_msg_heart
+          bottom: 52vmin
+        .shine3
+          bottom: 9.5vmin
+          left: 33.3vmin
+        .shine4
+          bottom: 10vmin
+          left: 26.3vmin
+
+    .skillPage
+      .skillList
+        .skillItem
+          .title
+            font-size: 3vmin
+          ul li .year
+            span
+              font-size: 3vmin
+            .num
+              font-size: 8vmin
+
+    .projectPage
+      .gotoWeb.mobile
+        .gotoWebsite
+          height: 33vmin
+      .info
+        .projectDetail
+          .topTitle
+            margin-bottom: 2vmin
+            .workTime
+              span
+                font-size: 3vmin
+            .classify
+              font-size: 3.5vmin
+          .name
+            margin-bottom: 2vmin
+            font-size: 5vmin
+          .points
+            width: 87%
+            li
+              .icon
+                width: 4.5vmin
+                height: 4.5vmin
+              .point
+                .title
+                  font-size: 3.4vmin
+                .text
+                  font-size: 3.2vmin
+      .tags
+        li
+          bottom: 8vmin
+          font-size: 4.6vmin
+
+  @media (max-width: 560px)
+    .swiper-pagination
+      display: none
+
+    .brandGroup
+      flex-direction: row
+      top: 40px
+      right: unset
+      left: 30px
+
+    .homePage
+      .svgBackground
+        .shine1
+          left: 14.04vmin
+        .shine2
+          top: 10.5vmin
+          left: 23vmin
+        .shine6
+          top: 14.5vmin
+          right: 13vmin
+        .icon_window1
+          top: 38vmin
+        .icon_grid
+          top: 20.06vmin
+          right: 7.13vmin
+        .icon_window3
+          top: 27.28vmin
+        .icon_rainbow
+          top: 17vmin
+        .icon_cloud_large
+          top: 35vmin
+        .icon_cloud_small
+          top: 36.5vmin
+          left: 19.35vmin
+        .icon_msg_hello
+          top: 28vmin
+
+    .introPage
+      .textBg
+        transform: scale(3) translateY(3%)
+      .pageTitle
+        width: fit-content
+        flex-direction: row
+        top: 12%
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 14vmin
+        gap: 16px
+      .letter
+        // padding: 5.5vmin 7vmin 9vmin
+        li
+          p
+            font-size: 3vmin
+            &.firstLine
+              font-size: 4.5vmin
+      .pageTitle
+        font-size: 17vmin
+
+    .skillPage
+      .pageTitle
+        top: 18vmin
+        font-size: 17vmin
+      .skillList
+        .skillItem
+          .title
+            font-size: 4vmin
+          ul li
+            .year
+              span
+                font-size: 4vmin
+            .skillLine .skill
+              padding: 0.7vmin 2.5vmin
+              font-size: 3vmin
+
+    .projectPage .info
+      top: 40%
+      padding-inline: 2rem
+
+    .projectPage .tags.mobile
+      bottom: 7rem
+      left: 3rem
+
+    .projectPage .gotoWeb.mobile
+      right: 1.5rem
+
+    .projectPage .info .projectDetail
+      .points
+        width: 100%
+      .name
+        font-size: 6vmin
+      .classify
+        margin-bottom: 0
+        font-size: 3vmin
+        padding-block: 2px
+
+    .projectPage .info .projectDetail .topTitle
+      margin-bottom: 8px
+
+  // iPad
+  @media (max-width: 1024px) and (min-height: 768px) and (max-height: 769px)
+    .homePage
+      h1
+        bottom: 7%
+      h2
+        bottom: 26.5%
+      .svgBackground
+        .icon_msg_heart
+          bottom: 41.5%
+        .icon_range
+          top: 45.15%
+        .icon_sun
+          right: 18%
+        .icon_window1
+          top: 23%
+        .icon_window3
+          top: 15.28%
+        .icon_rainbow
+          top: 5%
+        .icon_cloud_large
+          top: 23%
+        .icon_cloud_small
+          top: 29.5%
+        .icon_msg_hello
+          top: 13%
+
+    .introPage
+      .svgBackground
+        .icon_search
+          top: 14vmin
+          right: 20vmin
+          left: unset
+        .icon_fileBack
+          height: 73vmin
+        .icon_myPhoto
+          height: 66vmin
+          display: block
+          transform: translateY(-50%) !important
+        .icon_fileFront
+          height: 20vmin
+          display: block
+          right: 22.5%
+          bottom: 15.5%
+      .letter
+        width: 50%
+        top: 54%
+        left: 12vmin
+        z-index: 0
+        padding: 5vmin 9vmin 5vmin 5vmin
+        margin-inline: unset
+
+    .skillPage
+      .svgBackground
+        .icon_rainbow2
+          height: 115vh
+      .skillList
+        .skillItem
+          &:last-child
+            margin-top: 20px
+          .title
+            font-size: 3vmin
+          ul li .skillLine .skill
+            font-size: 2.8vmin
+
+  // Surface Pro
+  @media (max-width: 912px) and (max-height: 1368px) and (min-height: 920px)
+    .brandGroup
+      a
+        width: 6vw
+        height: 6vw
+        font-size: 4vw
+        &.fa-paperclip
+          font-size: 3.5vw
+
+    .homePage
+      h1
+        bottom: 15%
+      h2
+        bottom: 29%
+      .svgBackground
+        .icon_msg_heart
+          bottom: 36%
+        .icon_sticker
+          top: 46%
+          left: 1%
+        .icon_range
+          height: 50%
+          top: 49%
+          left: -4%
+        .icon_sun
+          top: 13%
+          right: 50%
+        .icon_window1
+          height: 43%
+          top: 26%
+          left: 5%
+        .icon_window3
+          height: 20%
+          top: 18%
+          left: 12%
+        .icon_rainbow
+          height: 20%
+          top: 10.7%
+          left: 9.2%
+        .icon_cloud_large
+          top: 26%
+          left: 5%
+        .icon_cloud_small
+          top: 15.5%
+          left: 20%
+        .icon_msg_hello
+          top: 19%
+
+    .introPage
+      .textBg
+        transform: scale(2.5)
+      .svgBackground
+        .icon_search
+          top: 13%
+          right: 10%
+        .icon_fileBack
+          width: 84%
+          left: 50%
+          transform: translate(-50%, -50%) !important
+        .paper1
+          display: none
+        .icon_fileFront
+          right: 20%
+          bottom: 20%
+      .letter
+        width: 90%
+        top: 50%
+        padding: 6vmin 6vmin 10vmin 6vmin
+
+    .projectPage
+      .gotoWeb.mobile
+        .gotoWebsite
+          height: 34.6vmin
+      .tags.mobile
         bottom: 20%
-    .letter
-      padding: 8% 7% 12%
+      .info
+        .projectDetail
+          .topTitle
+            .workTime
+              span
+                font-size: 3.5vmin
+            .classify
+              font-size: 4.5vmin
+          .name
+            font-size: 5.5vmin
+          .points li .point
+            .title
+              font-size: 3.5vmin
+            .text
+              font-size: 3.2vmin
 
-@media (max-width: 320px)
-  .homePage
-    h1
-      bottom: 15%
+  // Surface Duo
+  @media (max-width: 720px) and (max-height: 540px)
+    .homePage
+      h1
+        bottom: 5%
+      h2
+        bottom: 24.5%
+      .svgBackground
+        .icon_msg_heart
+          height: 8%
+          right: 24.5%
+          bottom: 40%
+        .icon_sun
+          height: 13%
+          top: 9%
+          right: 12%
+        .icon_window1
+          height: 65%
+          top: 18.61%
+          left: 15%
+        .icon_window3
+          height: 29%
+          top: 11%
+          left: 7.5%
+        .icon_rainbow
+          height: 29%
+          top: 0.45%
+          left: 9.2%
+        .icon_cloud_large
+          height: 14%
+          top: 20%
+          left: 4%
+        .icon_cloud_small
+          height: 8%
+          top: 6.5%
+          left: 16.5%
+        .icon_msg_hello
+          top: 8%
+          left: 59%
 
-  .introPage
-    .letter
-      padding: 10% 7% 12%
-      li
-        p
-          font-size: 14px
-          &.firstLine
-            font-size: 22px
+    .introPage
+      .pageTitle
+        top: unset
+        right: 8%
+        bottom: 5%
+        left: unset
+      .svgBackground
+        .paper1
+          bottom: -11%
+          left: 0
+        .icon_email
+          top: 7%
+        .icon_search
+          top: 13.5%
+        .icon_fileBack
+        .icon_myPhoto
+          right: 5%
+          bottom: 17%
+          z-index: 1
+        .icon_fileFront
+          right: 24%
+          bottom: 8.8%
+      .letter
+        padding: 5.5% 15% 5.5% 7%
 
-  .skillPage
-    .skillList
-      top: 54%
-      .skillItem
-        &:last-child
-          margin-top: 12px
-        ul li .skillLine .skill
-          font-size: 14px
+    .skillPage
+      .pageTitle
+        flex-direction: column
+        top: unset
+        right: 8%
+        bottom: 5%
+        left: unset
+        transform: unset
+      .svgBackground
+        .icon_rainbow2
+          height: 115vh
+      .skillList
+        left: 45%
+        .skillItem
+          &:last-child
+            margin-top: 18px
+          ul
+            min-width: 80vmin
+            max-width: 80vmin
+            padding: 1% 3% 3%
+            li
+              .skillLine
+                gap: 6px
+                .skill
+                  padding: 0.5% 2%
 
+    .projectPage
+      .gotoWeb.mobile
+        right: 2%
+        bottom: 2%
+        .gotoWebsite
+          height: 31.6vmin
+      .tags.mobile
+        bottom: 5%
+        left: 17%
+      .info
+        top: 43%
+        .projectDetail
+          .topTitle
+            margin-bottom: 3px
+            .workTime
+              span
+                font-size: 3vmin
+            .classify
+              padding: 3px 12px
+              font-size: 3.3vmin
+          .name
+            margin-bottom: 7px
+            font-size: 4.4vmin
+          .points
+            gap: 12px
+            li
+              .point
+                .title
+                  font-size: 3vmin
+                .text
+                  font-size: 3vmin
+      .tags li::after
+        box-shadow: none
 
+  // Surface Duo
+  @media (max-width: 540px) and (max-height: 720px)
+    .homePage
+      h1
+        bottom: 14%
+      .svgBackground
+        .icon_msg_heart
+          // height: 8%
+          right: 24.5%
+          bottom: 40%
+        .icon_sun
+          height: 13%
+          top: 9%
+          right: 12%
+        .icon_window1
+          height: 50%
+          top: 25%
+          left: 3%
+        .icon_window3
+          height: 29%
+          top: 15%
+          left: 7.5%
+        .icon_rainbow
+          height: 29%
+          top: 4.45%
+          left: 9.2%
+        .icon_cloud_large
+          height: 12%
+          top: 24%
+          left: -3%
+        .icon_cloud_small
+          height: 8%
+          top: 9.57%
+          left: 21.5%
+        .icon_msg_hello
+          top: 27%
+          left: 65%
 
+    .introPage
+      .pageTitle
+        width: fit-content
+        flex-direction: row
+        top: 12%
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 14vmin
+        gap: 16px
+      .svgBackground
+        .paper1, .icon_search
+          display: none
+        .icon_fileBack
+          width: 125%
+          top: 52%
+          left: 50%
+          transform: translate(-50%, -50%) !important
+        .icon_myPhoto
+          display: none
+      .letter
+        width: 84%
+        top: 56%
 
+    .skillPage
+      .pageTitle
+        top: 12%
+        font-size: 14vmin
+      .skillList
+        top: 55%
+        .skillItem
+          &:last-child
+            margin-top: 3%
+          ul
+            min-width: 82vmin
+            max-width: 82vmin
+            padding: 2% 3% 3% 7%
+            li
+              .skillLine
+                gap: 6px
 
+    .projectPage
+      .gotoWeb.mobile
+        .gotoWebsite
+          height: 31.6vmin
+      .info
+        top: 42.5%
+        .projectDetail
+          .topTitle
+            margin-bottom: 3px
+            .workTime
+              span
+                font-size: 3vmin
+            .classify
+              padding: 3px 12px
+              font-size: 3.3vmin
+          .name
+            margin-bottom: 7px
+            font-size: 4.4vmin
+          .points
+            gap: 12px
+            li
+              .point
+                .title
+                  font-size: 3vmin
+                .text
+                  font-size: 3vmin
 
+  @media (max-width: 440px)
+    \:root
+      --swiper-pagination-left: 5vw
+      --swiper-pagination-bullet-width: 5vw
+      --swiper-pagination-bullet-size: 5vw
+    .brandGroup
+      right: 5vw
+      a
+        width: 8vw
+        height: 8vw
+        font-size: 6vw
+        &.fa-paperclip
+          font-size: 5vw
+    .hamburger
+      display: none
 
+    .homePage
+      h1
+        right: 6%
+        bottom: 15%
+      h2
+        bottom: 26%
+        font-size: 17vmin
+      .svgBackground
+        .icon_msg_heart
+          display: none
+        .shine1, .shine2, .shine3, .shine4, .shine5, .shine6
+          height: 6%
+        .shine1
+          top: 6%
+        .shine2
+          top: 9.5%
+        .shine3
+          bottom: 5%
+          left: 40%
+        .shine4
+          bottom: 7%
+          left: 25%
+        .shine5
+          top: 8.11%
+          right: 7%
+        .shine6
+          top: 12%
+          right: 20%
+        .icon_sun
+          display: none
+        .icon_window1
+          height: 48%
+          top: 28%
+          left: -10%
+        .icon_grid
+          height: 46%
+          top: 18%
+        .icon_window3
+          height: 22%
+          top: 19.28%
+          left: -16%
+        .icon_rainbow
+          height: 25%
+          top: 10.8%
+          left: -8%
+        .icon_cloud_large
+          height: 11%
+          top: 27.5%
+          left: -13%
+        .icon_cloud_small
+          height: 7%
+          top: 15.5%
+          left: 6%
+        .icon_msg_hello
+          height: 8.5%
+          top: 21.8%
 
+    .introPage
+      .svgBackground
+        .icon_email, .icon_search, .paper1, .icon_fileFront
+          display: none
+        .icon_fileBack
+          width: 115%
+          left: 50%
+          transform: translate(-50%, -50%) !important
+      .letter
+        width: 84%
+        padding: 8% 8% 12%
+        gap: 12px
+        li
+          p
+            font-size: 16px
+            &.firstLine
+              font-size: 26px
 
+    .skillPage
+      .pageTitle
+        top: 11.5%
+      .skillList
+        top: 52%
+        .skillItem
+          &:last-child
+            margin-top: 20px
+          .title
+            margin-bottom: 5px
+            font-size: 16px
+            .icon
+              padding-right: 10px
+              gap: 9px
+              .minimize
+                &::before
+                  width: 13px
+                  border-width: 2px
+              .zoom
+                &::before, &::after
+                  width: 8px
+                  height: 8px
+                  border-width: 2px
+              .close
+                &::before, &::after
+                  width: 17px
+                  border-width: 2px
+          ul
+            li
+              padding-top: 3px
+              &:not(:last-child)
+                padding-top: 0
+                padding-bottom: 7px
+              .year
+                .num
+                  transform: translateY(11px)
+                  margin-right: 5px
+              .skillLine
+                gap: 7px
+                .skill
+                  font-size: 16px
+                  border: 2px solid var(--black)
 
+    .projectPage
+      .info
+        top: 40%
+        .projectDetail
+          .topTitle
+            margin-bottom: 8px
+            hr
+              display: none
+            .classify
+              font-size: 13px
+              word-break: keep-all
+          .name::after
+            -webkit-text-stroke-width: 4px
+            -moz-text-stroke-width: 4px
+          .points
+            li
+              .point
+                .title
+                  font-size: 13px
+                  &::after
+                    -webkit-text-stroke-width: 3px
+                    -moz-text-stroke-width: 3px
+                .text
+                  font-size: 13px
 
+  @media (max-width: 380px)
+    .homePage
+      h1
+        bottom: 14%
 
+    .introPage
+      .svgBackground
+        .icon_fileBack
+          bottom: 20%
+      .letter
+        padding: 8% 7% 12%
 
+  @media (max-width: 320px)
+    .homePage
+      h1
+        bottom: 15%
 
+    .introPage
+      .letter
+        padding: 10% 7% 12%
+        li
+          p
+            font-size: 14px
+            &.firstLine
+              font-size: 22px
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .skillPage
+      .skillList
+        top: 54%
+        .skillItem
+          &:last-child
+            margin-top: 12px
+          ul li .skillLine .skill
+            font-size: 14px
+    
 
